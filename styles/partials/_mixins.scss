@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./typography" as *;
 
 @mixin tablet {
     @media screen and (min-width: $tablet-breakpoint) {
@@ -12,3 +13,28 @@
     }
 }
 
+@mixin bold {
+    font-family: "Avenir Bold", "Avenir Bold ttf";
+    font-weight: 700;
+}
+
+@mixin regular {
+    font-family: "Avenir Regular", "Avenir Regular ttf";
+    font-weight: 400;
+}
+
+@mixin demi {
+    font-family: "Avenir Demi", "Avenir Demi ttf";
+    font-weight: 600;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-link {
+    text-decoration: none;
+    color:inherit;
+}
