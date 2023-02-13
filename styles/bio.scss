@@ -23,6 +23,9 @@
             @include tablet {
                 padding: 2.5rem 3rem;
             }
+            @include desktop {
+                padding: 2.5rem 3rem 2.5rem 6rem;
+            }
             &_link {
                 @include reset-link;
             }
@@ -106,6 +109,9 @@
                 font-size: 5.5rem;
                 padding: 0 0 0 3rem;
             }
+            @include desktop {
+                padding: 0 0 0 6rem;
+            }
         }
     }
     &_about {
@@ -123,6 +129,9 @@
                 padding: 4.75rem 3rem 2.25rem 3rem;
                 font-size: 3.375rem;
             }
+            @include desktop {
+                padding: 4.75rem 3rem 2.25rem 6rem;
+            }
         }
         &_image {
             width: calc(100vw - 4rem);
@@ -137,6 +146,10 @@
                 margin: 0 9rem;
                 background-position: center;
             }
+            @include desktop {
+                width: calc(100vw - 24rem);
+                margin: 0 12rem;
+            }
         }
         &_qoute {
             margin: 1.5rem 1.5rem .5rem 1.5rem;
@@ -149,6 +162,9 @@
                 margin: 3rem 9rem 1rem 9rem;
                 font-size: 2.0625rem;
                 line-height: 3rem;
+            }
+            @include desktop {
+                margin: 3rem 12rem 1rem 12rem;
             }
         }
         &_leader {
@@ -163,6 +179,9 @@
                 font-size: 1.5625rem;
                 line-height: 3rem;
             }
+            @include desktop {
+                margin: 1rem 12rem;
+            }
         }
         &_band {
             margin: 2rem 1.5rem 1rem 1.5rem;
@@ -175,6 +194,9 @@
                 font-size: 2.25rem;
                 line-height: 3rem;
             }
+            @include desktop {
+                margin: 4rem 12rem 2rem 12rem;
+            }
         }
         &_paragraphs {
             display: flex;
@@ -184,6 +206,9 @@
             @include tablet {
                 flex-direction: row;
                 margin: 0 9rem;
+            }
+            @include tablet {
+                margin: 0 12rem;
             }
             &_text {
                 padding: 0;
@@ -200,10 +225,16 @@
                     @include tablet {
                         padding-right: 1.5rem;
                     }
+                    @include desktop {
+                        padding-right: 4.5rem;
+                    }
                 }
                 &--right {
                     @include tablet {
                         padding-left: 1.5rem;
+                    }
+                    @include desktop {
+                        padding-left: 4.5rem;
                     }
                 }
             }
@@ -224,6 +255,9 @@
                 padding: 4.75rem 3rem 2.25rem 3rem;
                 font-size: 3.375rem;
             }
+            @include desktop {
+                padding: 4.75rem 6rem 2.25rem 6rem;
+            }
         }
         &_photoes {
             display: flex;
@@ -237,12 +271,18 @@
                 align-items: stretch;
                 margin: 0 3rem;
             }
+            @include desktop {
+                margin: 0 6rem;
+            }
             &_photo {
                 width: calc(100vw - 4rem);
                 margin: 0 1.5rem 1.5rem 1.5rem;
                 @include tablet {
                     width: 27.5vw;
                     margin: 0 0 4vw 0; 
+                }
+                @include desktop {
+                    margin: 0 0 2vw 0; 
                 }
             }
         }
@@ -277,8 +317,12 @@
                 @include demi;
                 @include tablet {
                 margin: 1rem 0 0 0;
-                padding: 4.75rem 1.5rem 2.25rem 3rem;
+                padding: 4.75rem 1vw 2.25rem 3rem;
                 font-size: 3.375rem;
+                white-space: nowrap;
+                }
+                @include desktop {
+                padding: 4.75rem 3rem 2.25rem 6rem;
                 }
             }
         }
@@ -302,6 +346,7 @@
             @include tablet {
                 display: flex;
                 padding-right: 3rem;
+                overflow: hidden;
                 &_link {
                     @include reset-link;
                 }
@@ -309,24 +354,36 @@
                     width: 11.25rem;
                 }
             }
+            @include desktop {
+                padding-right: 6rem;
+            }
         }
     }
     &_contact {
         display: flex;
         flex-direction: column;
+        margin: 0 1.5rem;
         @include tablet {
             flex-direction: row;
             justify-content: flex-start;
+            margin: 0 3rem;
+        }
+        @include desktop {
+            margin: 0 6rem;
         }
         &_person {
             display: flex;
             flex-direction: column;
             @include tablet {
-                padding-left: 1.5rem;
-                padding-right: .75rem;
+                padding-right: 2em;
+                max-width: 30vw;
+                overflow-wrap: break-word;
+            }
+            @include desktop {
+                padding-right: 5em;
             }
             &_name {
-                margin: 1rem 1.5rem;
+                margin: 1rem 0;
                 @include bold;
                 font-size: 1.25rem;
                 @include tablet {
@@ -335,7 +392,7 @@
                 }
             }
             &_address {
-                margin: 1rem 1.5rem;
+                margin: 1rem 0;
                 @include regular;
                 font-size: 1.25rem;
                 @include tablet {
@@ -344,7 +401,7 @@
                 }
             }
             &_email {
-                margin: 1rem 1.5rem;
+                margin: 1rem 0;
                 @include regular;
                 font-size: 1.25rem;
                 @include tablet {
@@ -383,6 +440,9 @@
                 margin: 0 0 0 3rem;
                 font-size: 1.3125rem;
                 line-height: 2rem;
+            }
+            @include desktop {
+                margin: 0 0 0 6rem;
             }
         }
     }
