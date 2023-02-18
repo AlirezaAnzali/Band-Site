@@ -19,7 +19,7 @@
             justify-content: center;
             align-items: center;
             margin: 0;
-            padding: 1.8rem 0 0 0;
+            padding: 1rem 0 0 0;
             @include tablet {
                 padding: 2.5rem 3rem;
             }
@@ -30,9 +30,8 @@
                 @include reset-link;
             }
             &_image {
-                width: 11.25rem;
-                // max-height: 1.25rem;
-                // max-width: 7.5rem;
+                max-height: 1.25rem;
+                max-width: 7.5rem;
             }
         }
         &_list {
@@ -43,21 +42,21 @@
             &_item {
                 width: 50vw;
                 height: 100%;
-                padding: 1rem;
+                padding: .5rem;
                 text-align: center;
                 color: $Mercury;
                 @include demi;
-                font-size: 1.125rem;
+                font-size: .875rem;
                 line-height: 1.375rem;
                 &:hover {
                     color: $White;
-                    @include bold;
-                    border-bottom: .3125rem solid $White;
+                    @include demi;
+                    border-bottom: .2188rem solid $White;
                 }
                 &--active {
                     color: $White;
-                    @include bold;
-                    border-bottom: .3125rem solid $White;
+                    @include demi;
+                    border-bottom: .2188rem solid $White;
                 }
                 @include tablet {
                     width: fit-content;
@@ -80,7 +79,7 @@
     width: 100%;
     &_hero {
         width: 100%;
-        height: 18rem;
+        height: 12.5rem;
         position: relative;
         background-image: url(../assets/Images/hero-bio.jpg);
         background-size: cover;
@@ -100,8 +99,8 @@
         }
         &_title {
             margin: 0;
-            padding: 1.5rem;
-            font-size: 2rem;
+            padding: 1rem;
+            font-size: 1.5rem;
             line-height: 2rem;
             @include bold;
             color: $White;
@@ -119,8 +118,8 @@
         background-color: $White;
         &_title {
             margin: 0;
-            padding: 2rem 1.5rem 0rem 1.5rem;
-            font-size: 2.25rem;
+            padding: 1.4rem 1rem 0rem 1rem;
+            font-size: 1.5rem;
             line-height: 2rem;
             @include demi;
             color: $BandSite-Black;
@@ -134,9 +133,9 @@
             }
         }
         &_image {
-            width: calc(100vw - 4rem);
-            height: 15rem;
-            margin: 1.5rem;
+            width: calc(100vw - 2rem);
+            height: 10rem;
+            margin: .5rem 1rem;
             background-image: url(../assets/Images/band.jpg);
             background-position: bottom;
             background-size: cover;
@@ -152,12 +151,12 @@
             }
         }
         &_qoute {
-            margin: 1.5rem 1.5rem .5rem 1.5rem;
+            margin: 1rem 1rem .25rem 1rem;
             padding: 0;
             @include demi;
             color: $BandSite-Black;
-            font-size: 1.375rem;
-            line-height: 2.125rem;
+            font-size: .875rem;
+            line-height: 1.375rem;
             @include tablet {
                 margin: 3rem 9rem 1rem 9rem;
                 font-size: 2.0625rem;
@@ -168,12 +167,12 @@
             }
         }
         &_leader {
-            margin: .5rem 1.5rem 1.5rem 1.5rem;
+            margin: .5rem 1rem .5rem 1rem;
             padding: 0;
             @include demi;
             color: $BandSite-Black;
-            font-size: 1.375rem;
-            line-height: 2.125rem;
+            font-size: .875rem;
+            line-height: 1.375rem;
             @include tablet {
                 margin: 1rem 9rem;
                 font-size: 1.5625rem;
@@ -184,11 +183,11 @@
             }
         }
         &_band {
-            margin: 2rem 1.5rem 1rem 1.5rem;
+            margin: 1.5rem 1rem 1rem 1rem;
             padding: 0;
             @include demi;
             color: $BandSite-DarkBlack;
-            font-size: 1.25rem;
+            font-size: .875rem;
             @include tablet {
                 margin: 4rem 9rem 2rem 9rem;
                 font-size: 2.25rem;
@@ -212,11 +211,11 @@
             }
             &_text {
                 padding: 0;
-                margin: 0 1.5rem 1rem 1.5rem;
+                margin: 0 1rem;
                 @include regular;
                 color: $BandSite-Black;
-                font-size: 1.25rem;
-                line-height: 1.75rem;
+                font-size: .8125rem;
+                line-height: 1.125rem;
                 @include tablet {
                     margin: 0;
                     line-height: 1.875rem;
@@ -244,9 +243,9 @@
         width: 100%;
         background-color: $Alabaster;
         &_title {
-            margin: 1.5rem 0;
-            padding: 2rem 1.5rem 0rem 1.5rem;
-            font-size: 2.25rem;
+            margin: .7rem 0;
+            padding: 1.4rem 1rem 0rem 1rem;
+            font-size: 1.5rem;
             line-height: 2rem;
             @include demi;
             color: $BandSite-Black;
@@ -275,8 +274,8 @@
                 margin: 0 6rem;
             }
             &_photo {
-                width: calc(100vw - 4rem);
-                margin: 0 1.5rem 1.5rem 1.5rem;
+                width: calc(100vw - 2rem);
+                margin: 0 1rem 1rem 1rem;
                 @include tablet {
                     width: 27.5vw;
                     margin: 0 0 4vw 0; 
@@ -310,9 +309,9 @@
             justify-content: flex-start;
             align-items: center;
             &_text {
-                margin: 1rem 0;
-                padding: 2rem 1.5rem 0rem 1.5rem;
-                font-size: 2.25rem;
+                margin: .6rem 0;
+                padding: 1.4rem 1rem 0rem 1rem;
+                font-size: 1.5rem;
                 line-height: 2rem;
                 @include demi;
                 @include tablet {
@@ -332,13 +331,13 @@
                 display: flex;
             }
             &_item {
-                padding: 1rem 1rem 1rem 1.5rem;
+                padding: .5rem .8rem .5rem 1rem;
             }
             &_link {
                 @include reset-link;
             }
             &_icon {
-                height: 2.125rem;
+                height: 1.3rem;
             }
         }
         &_logo {
@@ -351,7 +350,8 @@
                     @include reset-link;
                 }
                 &_image {
-                    width: 11.25rem;
+                    max-height: 1.25rem;
+                    max-width: 7.5rem;
                 }
             }
             @include desktop {
@@ -362,7 +362,7 @@
     &_contact {
         display: flex;
         flex-direction: column;
-        margin: 0 1.5rem;
+        margin: 0 1rem;
         @include tablet {
             flex-direction: row;
             justify-content: flex-start;
@@ -383,27 +383,30 @@
                 padding-right: 5em;
             }
             &_name {
-                margin: 1rem 0;
-                @include bold;
-                font-size: 1.25rem;
+                margin: .5rem 0;
+                @include demi;
+                font-size: .8125rem;
+                line-height: 1.125rem;
                 @include tablet {
                     font-size: 1.3125rem;
                     line-height: 2rem;
                 }
             }
             &_address {
-                margin: 1rem 0;
+                margin: .5rem 0;
                 @include regular;
-                font-size: 1.25rem;
+                font-size: .8125rem;
+                line-height: 1.125rem;
                 @include tablet {
                     font-size: 1.3125rem;
                     line-height: 2rem;
                 }
             }
             &_email {
-                margin: 1rem 0;
+                margin: .5rem 0;
                 @include regular;
-                font-size: 1.25rem;
+                font-size: .8125rem;
+                line-height: 1.125rem;
                 @include tablet {
                     font-size: 1.3125rem;
                     line-height: 2rem;
@@ -422,19 +425,19 @@
             }
             &_link {
                 @include reset-link;
-                padding-left: 1.5rem;
+                padding-left: 1rem;
             }
             &_image {
-                width: 10rem;
-                // max-height: 1.25rem;
-                // max-width: 7.5rem;
+                max-height: 1.25rem;
+                max-width: 7.5rem;
             }
         }
         &_text {
-            margin: 0 0 0 1.5rem;
-            padding: 1.5rem 0;
+            margin: 0;
+            padding: 1rem;
             @include regular;
-            font-size: 1rem;
+            font-size: .6875rem;
+            line-height: 1.125rem;
             @include tablet {
                 padding: 0 0 3rem 0;
                 margin: 0 0 0 3rem;

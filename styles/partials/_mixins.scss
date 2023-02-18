@@ -14,17 +14,17 @@
 }
 
 @mixin bold {
-    font-family: "Avenir Bold", "Avenir Bold ttf";
+    font-family: "Avenir Bold", "Avenir Bold ttf", Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
 
 @mixin regular {
-    font-family: "Avenir Regular", "Avenir Regular ttf";
+    font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
     font-weight: 400;
 }
 
 @mixin demi {
-    font-family: "Avenir Demi", "Avenir Demi ttf";
+    font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
     font-weight: 600;
 }
 
