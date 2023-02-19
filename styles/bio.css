@@ -553,6 +553,90 @@ body {
     padding-right: 2rem;
   }
 }
+.main_conversation_comments {
+  display: flex;
+  margin: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_comments {
+    margin: 1rem 6rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .main_conversation_comments {
+    margin: 1rem 24rem;
+  }
+}
+.main_conversation_comments_comment {
+  border-bottom: 0.0625rem solid #E1E1E1;
+  display: flex;
+}
+.main_conversation_comments_comment_avatar_image {
+  margin: 1.2rem 1rem 0 0;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  background-image: url(../assets/Images/Mohan-muruge.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_comments_comment_avatar_image {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+.main_conversation_comments_comment_comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main_conversation_comments_comment_comment_name {
+  display: flex;
+  justify-content: space-between;
+}
+.main_conversation_comments_comment_comment_name_name {
+  font-family: "Avenir Bold", "Avenir Bold ttf", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #323232;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_comments_comment_comment_name_name {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.main_conversation_comments_comment_comment_name_date {
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #E1E1E1;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_comments_comment_comment_name_date {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.main_conversation_comments_comment_comment_text {
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_comments_comment_comment_text {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
 
 .footer {
   width: 100%;

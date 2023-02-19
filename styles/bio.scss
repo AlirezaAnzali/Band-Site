@@ -59,6 +59,7 @@
                     border-bottom: .2188rem solid $White;
                 }
                 @include tablet {
+                    width: -moz-fit-content;
                     width: fit-content;
                     padding: 0;
                     margin: 0 1.75rem;
@@ -379,6 +380,77 @@
                             width: 9.375rem;
                             padding-left: 2rem;
                             padding-right: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+        &_comments {
+            display: flex;
+            margin: 1rem;
+            @include tablet {
+                margin: 1rem 6rem;
+            }
+            @include desktop {
+                margin: 1rem 24rem;
+            }
+            &_comment {
+                border-bottom: .0625rem solid $Mercury;
+                display: flex;
+                &_avatar {
+                    &_image {
+                        margin: 1.2rem 1rem 0 0;
+                        height: 2.25rem;
+                        width: 2.25rem;
+                        border-radius: 50%;
+                        background-image: url(../assets/Images/Mohan-muruge.jpg);
+                        background-position:bottom;
+                        background-size: cover;
+                        @include tablet {
+                            height: 3rem;
+                            width: 3rem;
+                        }
+                    }
+                }
+                &_comment {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    &_name {
+                        display: flex;
+                        justify-content: space-between;
+                        &_name {
+                            @include bold;
+                            color: $BandSite-Black;
+                            font-size: .8125rem;
+                            line-height: 1.125rem;
+                            @include tablet {
+                                margin: 0;
+                                font-size: .875rem;
+                                line-height: 1.375rem;
+                            }
+                        }
+                        &_date {
+                            @include regular;
+                            color: $Mercury;
+                            font-size: .8125rem;
+                            line-height: 1.125rem;
+                            @include tablet {
+                                margin: 0;
+                                font-size: .875rem;
+                                line-height: 1.375rem;
+                            }
+                        }
+                    }
+                    &_text {
+                        @include regular;
+                        color: $BandSite-Black;
+                        font-size: .8125rem;
+                        line-height: 1.125rem;
+                        @include tablet {
+                            margin: 0;
+                            font-size: .875rem;
+                            line-height: 1.375rem;
                         }
                     }
                 }
