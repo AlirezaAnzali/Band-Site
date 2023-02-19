@@ -478,6 +478,7 @@ body {
 .main_conversation_form {
   display: flex;
   margin: 1rem;
+  margin-bottom: 0;
   border-bottom: 0.1875rem solid #E1E1E1;
 }
 @media screen and (min-width: 48rem) {
@@ -555,7 +556,9 @@ body {
 }
 .main_conversation_comments {
   display: flex;
+  flex-direction: column;
   margin: 1rem;
+  margin-top: 0;
 }
 @media screen and (min-width: 48rem) {
   .main_conversation_comments {
@@ -568,17 +571,16 @@ body {
   }
 }
 .main_conversation_comments_comment {
+  margin-top: 1rem;
   border-bottom: 0.0625rem solid #E1E1E1;
   display: flex;
 }
 .main_conversation_comments_comment_avatar_image {
-  margin: 1.2rem 1rem 0 0;
+  margin: 0 1rem 0 0;
   height: 2.25rem;
   width: 2.25rem;
   border-radius: 50%;
-  background-image: url(../assets/Images/Mohan-muruge.jpg);
-  background-position: bottom;
-  background-size: cover;
+  background-color: #E1E1E1;
 }
 @media screen and (min-width: 48rem) {
   .main_conversation_comments_comment_avatar_image {
@@ -596,8 +598,9 @@ body {
   justify-content: space-between;
 }
 .main_conversation_comments_comment_comment_name_name {
-  font-family: "Avenir Bold", "Avenir Bold ttf", Arial, Helvetica, sans-serif;
-  font-weight: 700;
+  margin: 0;
+  font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
+  font-weight: 600;
   color: #323232;
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -605,20 +608,23 @@ body {
 @media screen and (min-width: 48rem) {
   .main_conversation_comments_comment_comment_name_name {
     margin: 0;
+    padding-bottom: 0.5rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 .main_conversation_comments_comment_comment_name_date {
+  margin: 0;
   font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  color: #E1E1E1;
+  color: #AFAFAF;
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
 @media screen and (min-width: 48rem) {
   .main_conversation_comments_comment_comment_name_date {
     margin: 0;
+    padding-bottom: 0.5rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
@@ -635,6 +641,7 @@ body {
     margin: 0;
     font-size: 0.875rem;
     line-height: 1.375rem;
+    padding-bottom: 1rem;
   }
 }
 
