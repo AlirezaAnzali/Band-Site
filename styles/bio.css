@@ -22,13 +22,65 @@
   font-family: "Avenir Bold ttf";
   src: url(../../assets/Font/Alternative/AvenirNextLTProBold.ttf) format("TrueType");
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
+}
+
+::-moz-placeholder {
+  color: #000;
+  opacity: 1;
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+::placeholder {
+  color: #000;
+  opacity: 1;
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.label {
+  margin-bottom: 1rem;
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #AFAFAF;
+}
+
+.box {
+  border: 0.125rem solid #E1E1E1;
+  border-radius: 0.25rem;
+  width: 100%;
+  background-color: #FAFAFA;
+  color: #000000;
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.box:focus {
+  border: 0.125rem solid #000000;
+}
+.box:invalid {
+  border: 0.125rem solid #D22D2D;
+}
+
+.button {
+  height: 2.5rem;
+  color: #FFFFFF;
+  background-color: #323232;
+  border-radius: 0.25rem;
+  border: none;
+  font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.button:hover {
+  background-color: #000000;
 }
 
 .header {
@@ -396,6 +448,109 @@ body {
   .main_gallary_photoes_photo {
     width: 25vw;
     margin: 0 0 2vw 0;
+  }
+}
+.main_conversation {
+  width: 100%;
+  background-color: #FFFFFF;
+}
+.main_conversation_title {
+  margin: 0;
+  padding: 1.4rem 1rem 0rem 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #323232;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_title {
+    padding: 3rem 2.25rem 1rem 2.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .main_conversation_title {
+    padding: 3.5rem 3rem 2.25rem 8rem;
+  }
+}
+.main_conversation_form {
+  display: flex;
+  margin: 1rem;
+  border-bottom: 0.1875rem solid #E1E1E1;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_form {
+    margin: 1rem 6rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .main_conversation_form {
+    margin: 1rem 24rem;
+  }
+}
+.main_conversation_form_avatar_image {
+  margin: 1.2rem 1rem 0 0;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  background-image: url(../assets/Images/Mohan-muruge.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_form_avatar_image {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+.main_conversation_form_comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.main_conversation_form_comment_name {
+  padding-bottom: 0.75rem;
+}
+.main_conversation_form_comment_name_label {
+  font-size: 0.625rem;
+}
+.main_conversation_form_comment_name_box {
+  min-height: 2.25rem;
+  padding: 0.625rem;
+  font-size: 0.875rem;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_form_comment_name_box {
+    min-height: 3rem;
+  }
+}
+.main_conversation_form_comment_comment {
+  padding-bottom: 0.75rem;
+}
+.main_conversation_form_comment_comment_label {
+  font-size: 0.625rem;
+}
+.main_conversation_form_comment_comment_box {
+  min-height: 6.5rem;
+  padding: 0.625rem;
+  font-size: 0.875rem;
+  resize: none;
+}
+.main_conversation_form_comment_button {
+  padding-bottom: 0.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.main_conversation_form_comment_button_button {
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .main_conversation_form_comment_button_button {
+    width: 9.375rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 

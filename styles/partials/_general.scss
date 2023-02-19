@@ -1,9 +1,53 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./typography" as *;
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+::placeholder {
+  color: #000;
+  opacity: 1;
+  @include regular;
+}
+
+.label {
+  margin-bottom: 1rem;
+  @include regular;
+  color: $Silver;
+}
+
+.box {
+  border: 0.125rem solid $Mercury;
+  border-radius: 0.25rem;
+  width: 100%;
+  background-color: $Alabaster;
+  color: $BandSite-DarkBlack;
+  @include regular;
+  &:focus {
+    border: 0.125rem solid $BandSite-DarkBlack;
+  }
+  &:invalid {
+    border: 0.125rem solid #D22D2D;
+  }
+}
+
+.button {
+    height: 2.5rem;
+    color: $White;
+    background-color: $BandSite-Black;
+    border-radius: .25rem;
+    border: none;
+    @include demi;
+    &:hover {
+        background-color: $BandSite-DarkBlack;
+    }
 }
