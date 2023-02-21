@@ -85,8 +85,121 @@
             }    
         }
     }
-    &shows {
+    &_shows {
         width: 100%;
         background-color: $White;
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+        }
+        &_title {
+            margin: 0;
+            padding: 1.4rem 1rem 1.4rem 1rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            @include demi;
+            color: $BandSite-DarkBlack;
+            @include tablet {
+                padding: 3rem 2.25rem 1rem 2.25rem;
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+            @include desktop {
+                padding: 3.5rem 3rem 2.25rem 8rem;
+            }
+        }
+        &_mobile {
+            display:flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 1rem;
+            @include tablet {
+                display: none;
+            }
+            &_event {
+                display:flex;
+                flex-direction: column;
+                margin: 0 0 1rem 0;
+                border-bottom: .125rem solid $Mercury;
+                &:hover {
+                    background-color: $Alabaster;
+                }
+            }
+            &_header {
+                margin: .3rem 0;
+                font-size: .75rem;
+                @include demi;
+            }
+            &_date{
+                margin: 0 0 1rem 0;
+                @include demi;
+                color: $BandSite-Black;
+                font-size: .8438rem;
+            }
+            &_data {
+                margin: 0 0 1rem 0;
+                @include regular;
+                color: $BandSite-Black;
+                font-size: .8438rem;
+            }
+            &_button {
+                width: 100%;
+                font-size: .9375rem;
+            }
+        }
+        &_table {
+            display: none;
+            @include tablet {
+                display:flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0 2.25rem;
+            }
+            @include desktop {
+                display:flex;
+                flex-direction: column;
+                padding: 0 8rem;
+            }
+            &_headerrow {
+                display: flex;
+                justify-content: space-between;
+            }
+            &_header {
+                margin: 0;
+                font-size: .75rem;
+                @include demi;
+                width: 25%;
+            }
+            &_event {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 0;
+                margin: 0;
+                border-bottom: .125rem solid $Mercury;
+                &:hover {
+                    background-color: $Alabaster;
+                }
+            }
+            &_date{
+                margin: 0;
+                @include demi;
+                color: $BandSite-Black;
+                font-size: .8438rem;
+                width: 25%;
+            }
+            &_data {
+                margin: 0;
+                @include regular;
+                color: $BandSite-Black;
+                font-size: .8438rem;
+                width: 25%;
+            }
+            &_button {
+                width: 100%;
+                font-size: .9375rem;
+            }
+        }
     }
 }

@@ -480,7 +480,138 @@ body {
   border-radius: 0.25rem;
   width: 100%;
 }
-.mainshows {
+.main_shows {
   width: 100%;
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 80rem) {
+  .main_shows {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+.main_shows_title {
+  margin: 0;
+  padding: 1.4rem 1rem 1.4rem 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+@media screen and (min-width: 48rem) {
+  .main_shows_title {
+    padding: 3rem 2.25rem 1rem 2.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .main_shows_title {
+    padding: 3.5rem 3rem 2.25rem 8rem;
+  }
+}
+.main_shows_mobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .main_shows_mobile {
+    display: none;
+  }
+}
+.main_shows_mobile_event {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1rem 0;
+  border-bottom: 0.125rem solid #E1E1E1;
+}
+.main_shows_mobile_event:hover {
+  background-color: #FAFAFA;
+}
+.main_shows_mobile_header {
+  margin: 0.3rem 0;
+  font-size: 0.75rem;
+  font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+.main_shows_mobile_date {
+  margin: 0 0 1rem 0;
+  font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #323232;
+  font-size: 0.8438rem;
+}
+.main_shows_mobile_data {
+  margin: 0 0 1rem 0;
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 0.8438rem;
+}
+.main_shows_mobile_button {
+  width: 100%;
+  font-size: 0.9375rem;
+}
+.main_shows_table {
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .main_shows_table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2.25rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .main_shows_table {
+    padding: 0 8rem;
+  }
+}
+.main_shows_table_headerrow {
+  display: flex;
+  justify-content: space-between;
+}
+.main_shows_table_header {
+  margin: 0;
+  font-size: 0.75rem;
+  font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  width: 25%;
+}
+.main_shows_table_event {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 0;
+  border-bottom: 0.125rem solid #E1E1E1;
+}
+.main_shows_table_event:hover {
+  background-color: #FAFAFA;
+}
+.main_shows_table_date {
+  margin: 0;
+  font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #323232;
+  font-size: 0.8438rem;
+  width: 25%;
+}
+.main_shows_table_data {
+  margin: 0;
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #323232;
+  font-size: 0.8438rem;
+  width: 25%;
+}
+.main_shows_table_button {
+  width: 100%;
+  font-size: 0.9375rem;
 }/*# sourceMappingURL=shows.css.map */
