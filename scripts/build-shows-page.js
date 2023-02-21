@@ -1,3 +1,4 @@
+// creating array of Shows
 const Shows = [
   {
     DATE: "Mon Sep 06 2021",
@@ -31,6 +32,8 @@ const Shows = [
   }
 ];
 
+
+// declaring function for inserting shows
 function insertNewShow(obj) {
 const mobileSection = document.createElement("section");
 mobileSection.classList.add("main_shows_mobile");
@@ -131,6 +134,8 @@ tableButtonDiv.appendChild(tableBuyTicketsButton);
 tableEventDiv.appendChild(tableButtonDiv);
 };
 
+
+// adding shows by invoking function on Shows array objects
 const mainShowsSection = document.createElement('section');
 mainShowsSection.classList.add('main_shows');
 
@@ -148,4 +153,34 @@ Shows.forEach((obj) => insertNewShow(obj));
 const main = document.querySelector("main");
 main.appendChild(mainShowsSection);
 
+// changing color of selected events
+const mobileEvents = document.querySelectorAll(".main_shows_mobile_event");
+const tableEvents = document.querySelectorAll(".main_shows_table_event");
+
+let selectedMobileEvent = null;
+let selectedTableEvent = null;
+
+for (let i = 0; i < mobileEvents.length; i++) {
+  const mobileEvent = mobileEvents[i];
+
+  mobileEvent.addEventListener("click", function () {
+    if (selectedMobileEvent) {
+      selectedMobileEvent.style.backgroundColor = null;
+    }
+    selectedMobileEvent = mobileEvent;
+    selectedMobileEvent.style.backgroundColor = "#E1E1E1";
+  });
+}
+
+for (let i = 0; i < tableEvents.length; i++) {
+  const tableEvent = tableEvents[i];
+
+  tableEvent.addEventListener("click", function () {
+    if (selectedTableEvent) {
+      selectedTableEvent.style.backgroundColor = null;
+    }
+    selectedTableEvent = tableEvent;
+    selectedTableEvent.style.backgroundColor = "#E1E1E1";
+  });
+}
 
