@@ -3,90 +3,20 @@
 @use "./partials/typography" as *;
 @use "./partials/general" as *;
 
-.header {
-    width: 100%;
-    background-color: $BandSite-Black;
-    &_nav{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        @include tablet {
-            flex-direction: row;
-        }
-        &_logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            padding: 1.8rem 0 0 0;
-            @include tablet {
-                padding: 2.5rem 3rem;
-            }
-            @include desktop {
-                padding: 2.5rem 3rem 2.5rem 6rem;
-            }
-            &_link {
-                @include reset-link;
-            }
-            &_image {
-                width: 11.25rem;
-                // max-height: 1.25rem;
-                // max-width: 7.5rem;
-            }
-        }
-        &_list {
-            @include reset-list;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &_item {
-                width: 50vw;
-                height: 100%;
-                padding: 1rem;
-                text-align: center;
-                color: $Mercury;
-                @include demi;
-                font-size: 1.125rem;
-                line-height: 1.375rem;
-                &:hover {
-                    color: $White;
-                    @include bold;
-                    border-bottom: .3125rem solid $White;
-                }
-                &--active {
-                    color: $White;
-                    @include bold;
-                    border-bottom: .3125rem solid $White;
-                }
-                @include tablet {
-                    width: fit-content;
-                    padding: 0;
-                    margin: 0 3rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 1.25rem;
-                }
-            }
-            &_link {
-                @include reset-link;
-            }
-        }
-    }
-}
-
 .main {
     width: 100%;
     &_hero {
         width: 100%;
-        height: 18rem;
+        height: 12.5rem;
         position: relative;
         background-image: url(../assets/Images/hero-bio.jpg);
         background-size: cover;
         background-position: center;
         @include tablet {
-            height: 44rem;
+            height: 27.5rem;
+        }
+        @include desktop {
+            height: 40rem;
         }
         &_overlay {
             width: 100%;
@@ -100,17 +30,18 @@
         }
         &_title {
             margin: 0;
-            padding: 1.5rem;
-            font-size: 2rem;
+            padding: 1rem;
+            font-size: 1.5rem;
             line-height: 2rem;
             @include bold;
             color: $White;
             @include tablet {
-                font-size: 5.5rem;
-                padding: 0 0 0 3rem;
+                font-size: 3.75rem;
+                line-height: 4.25rem;
+                padding: 2.25rem;
             }
             @include desktop {
-                padding: 0 0 0 6rem;
+                padding: 8rem;
             }
         }
     }
@@ -119,83 +50,82 @@
         background-color: $White;
         &_title {
             margin: 0;
-            padding: 2rem 1.5rem 0rem 1.5rem;
-            font-size: 2.25rem;
+            padding: 1.4rem 1rem 0rem 1rem;
+            font-size: 1.5rem;
             line-height: 2rem;
             @include demi;
             color: $BandSite-Black;
             @include tablet {
-                margin: 1rem 0;
-                padding: 4.75rem 3rem 2.25rem 3rem;
-                font-size: 3.375rem;
+                padding: 3rem 2.25rem 1.5rem 2.25rem;
+                font-size: 2.25rem;
+                line-height: 2.75rem;
             }
             @include desktop {
-                padding: 4.75rem 3rem 2.25rem 6rem;
+                padding: 3.5rem 3rem 2.25rem 8rem;
             }
         }
         &_image {
-            width: calc(100vw - 4rem);
-            height: 15rem;
-            margin: 1.5rem;
+            // width: calc(100vw - 2rem);
+            height: 10rem;
+            margin: .5rem 1rem;
             background-image: url(../assets/Images/band.jpg);
-            background-position: bottom;
+            background-position:bottom;
             background-size: cover;
             @include tablet {
-                width: calc(100vw - 18rem);
-                height: 30rem;
-                margin: 0 9rem;
+                height: 20rem;
+                margin: 0 6rem;
                 background-position: center;
             }
             @include desktop {
-                width: calc(100vw - 24rem);
-                margin: 0 12rem;
+                height: 28rem;
+                margin: 0 13.5rem;
             }
         }
         &_qoute {
-            margin: 1.5rem 1.5rem .5rem 1.5rem;
+            margin: 1rem 1rem .25rem 1rem;
             padding: 0;
             @include demi;
             color: $BandSite-Black;
-            font-size: 1.375rem;
-            line-height: 2.125rem;
+            font-size: .875rem;
+            line-height: 1.375rem;
             @include tablet {
-                margin: 3rem 9rem 1rem 9rem;
-                font-size: 2.0625rem;
-                line-height: 3rem;
+                margin: 2rem 6rem 1rem 6rem;
+                font-size: 1.5rem;
+                line-height: 2rem;
             }
             @include desktop {
-                margin: 3rem 12rem 1rem 12rem;
+                margin: 3rem 13.5rem 1rem 13.5rem;
             }
         }
         &_leader {
-            margin: .5rem 1.5rem 1.5rem 1.5rem;
+            margin: .5rem 1rem .5rem 1rem;
             padding: 0;
             @include demi;
             color: $BandSite-Black;
-            font-size: 1.375rem;
-            line-height: 2.125rem;
+            font-size: .875rem;
+            line-height: 1.375rem;
             @include tablet {
-                margin: 1rem 9rem;
-                font-size: 1.5625rem;
-                line-height: 3rem;
+                margin: 1rem 6rem;
+                font-size: 1rem;
+                line-height: 1.375rem;
             }
             @include desktop {
-                margin: 1rem 12rem;
+                margin: 1rem 13.5rem;
             }
         }
         &_band {
-            margin: 2rem 1.5rem 1rem 1.5rem;
+            margin: 1.5rem 1rem 1rem 1rem;
             padding: 0;
             @include demi;
             color: $BandSite-DarkBlack;
-            font-size: 1.25rem;
+            font-size: .875rem;
             @include tablet {
-                margin: 4rem 9rem 2rem 9rem;
-                font-size: 2.25rem;
-                line-height: 3rem;
+                margin: 3rem 6rem 1.5rem 6rem;
+                font-size: 1.5rem;
+                line-height: 2rem;
             }
             @include desktop {
-                margin: 4rem 12rem 2rem 12rem;
+                margin: 4rem 13.5rem 2rem 13.5rem;
             }
         }
         &_paragraphs {
@@ -205,36 +135,37 @@
             align-items: flex-start;
             @include tablet {
                 flex-direction: row;
-                margin: 0 9rem;
+                margin: 0 6rem;
             }
-            @include tablet {
-                margin: 0 12rem;
+            @include desktop {
+                margin: 0 13.5rem;
             }
             &_text {
                 padding: 0;
-                margin: 0 1.5rem 1rem 1.5rem;
+                margin: 0 1rem;
                 @include regular;
                 color: $BandSite-Black;
-                font-size: 1.25rem;
-                line-height: 1.75rem;
+                font-size: .8125rem;
+                line-height: 1.125rem;
                 @include tablet {
                     margin: 0;
-                    line-height: 1.875rem;
+                    font-size: .875rem;
+                    line-height: 1.375rem;
                 }
                 &--left {
                     @include tablet {
-                        padding-right: 1.5rem;
+                        padding-right: .75rem;
                     }
                     @include desktop {
-                        padding-right: 4.5rem;
+                        padding-right: 1rem;
                     }
                 }
                 &--right {
                     @include tablet {
-                        padding-left: 1.5rem;
+                        padding-left: .75rem;
                     }
                     @include desktop {
-                        padding-left: 4.5rem;
+                        padding-left: 1rem;
                     }
                 }
             }
@@ -244,19 +175,19 @@
         width: 100%;
         background-color: $Alabaster;
         &_title {
-            margin: 1.5rem 0;
-            padding: 2rem 1.5rem 0rem 1.5rem;
-            font-size: 2.25rem;
+            margin: .7rem 0;
+            padding: 1.4rem 1rem 0rem 1rem;
+            font-size: 1.5rem;
             line-height: 2rem;
             @include demi;
             color: $BandSite-Black;
             @include tablet {
-                margin: 1rem 0 0 0;
-                padding: 4.75rem 3rem 2.25rem 3rem;
-                font-size: 3.375rem;
+                padding: 3rem 2.25rem 1rem 2.25rem;
+                font-size: 2.25rem;
+                line-height: 2.75rem;
             }
             @include desktop {
-                padding: 4.75rem 6rem 2.25rem 6rem;
+                padding: 3.5rem 3rem 2.25rem 8rem;
             }
         }
         &_photoes {
@@ -269,180 +200,190 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
                 align-items: stretch;
-                margin: 0 3rem;
+                margin: 0 2.25rem;
             }
             @include desktop {
-                margin: 0 6rem;
+                margin: 0 8rem;
             }
             &_photo {
-                width: calc(100vw - 4rem);
-                margin: 0 1.5rem 1.5rem 1.5rem;
+                width: calc(100vw - 2rem);
+                margin: 0 1rem 1rem 1rem;
                 @include tablet {
                     width: 27.5vw;
                     margin: 0 0 4vw 0; 
                 }
                 @include desktop {
+                    width: 25vw;
                     margin: 0 0 2vw 0; 
                 }
             }
         }
     }
-}
-.footer {
-    width: 100%;
-    background-color: $BandSite-Black;
-    color: $White;
-    &_get {
-        display: flex;
-        flex-direction: column;
-        @include tablet {
-            flex-direction: row;
-            align-items: baseline;
-            justify-content: space-between;
-            &_left {
-                display: flex;
-                justify-content: flex-start;
-                align-items: baseline;
-            }
-        }
+    &_conversation {
+        width: 100%;
+        background-color: $White;
         &_title {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            &_text {
-                margin: 1rem 0;
-                padding: 2rem 1.5rem 0rem 1.5rem;
-                font-size: 2.25rem;
-                line-height: 2rem;
-                @include demi;
-                @include tablet {
-                margin: 1rem 0 0 0;
-                padding: 4.75rem 1vw 2.25rem 3rem;
-                font-size: 3.375rem;
-                white-space: nowrap;
-                }
-                @include desktop {
-                padding: 4.75rem 3rem 2.25rem 6rem;
-                }
-            }
-        }
-        &_icons {
-            &_list {
-                @include reset-list;
-                display: flex;
-            }
-            &_item {
-                padding: 1rem 1rem 1rem 1.5rem;
-            }
-            &_link {
-                @include reset-link;
-            }
-            &_icon {
-                height: 2.125rem;
-            }
-        }
-        &_logo {
-            display: none;
+            margin: 0;
+            padding: 1.4rem 1rem 0rem 1rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            @include demi;
+            color: $BandSite-Black;
             @include tablet {
-                display: flex;
-                padding-right: 3rem;
-                overflow: hidden;
-                &_link {
-                    @include reset-link;
-                }
-                &_image {
-                    width: 11.25rem;
-                }
+                padding: 3rem 2.25rem 1rem 2.25rem;
+                font-size: 2.25rem;
+                line-height: 2.75rem;
             }
             @include desktop {
-                padding-right: 6rem;
+                padding: 3.5rem 3rem 2.25rem 8rem;
             }
         }
-    }
-    &_contact {
-        display: flex;
-        flex-direction: column;
-        margin: 0 1.5rem;
-        @include tablet {
-            flex-direction: row;
-            justify-content: flex-start;
-            margin: 0 3rem;
+        &_form {
+            display: flex;
+            margin: 1rem;
+            margin-bottom: 0;
+            border-bottom: .1875rem solid $Mercury;
+            @include tablet {
+                margin: 1rem 6rem;
+            }
+            @include desktop {
+                margin: 1rem 24rem;
+            }
+            &_avatar {
+                &_image {
+                    margin: 1.2rem 1rem 0 0;
+                    height: 2.25rem;
+                    width: 2.25rem;
+                    border-radius: 50%;
+                    background-image: url(../assets/Images/Mohan-muruge.jpg);
+                    background-position:bottom;
+                    background-size: cover;
+                    @include tablet {
+                        height: 3rem;
+                        width: 3rem;
+                    }
+                }
+            }
+            &_comment {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                &_name {
+                    padding-bottom: .75rem;
+                    &_label {
+                        font-size: .625rem;
+                    }
+                    &_box {
+                        min-height: 2.25rem;
+                        padding: .625rem;
+                        font-size: .875rem;
+                        @include tablet {
+                            min-height: 3rem;
+                        }
+                    }
+                }
+                &_comment {
+                    padding-bottom: .75rem;
+                    &_label {
+                        font-size: .625rem;
+                    }
+                    &_box {
+                        min-height: 6.5rem;
+                        padding: .625rem;
+                        font-size: .875rem;
+                        resize: none;
+                    }
+                }
+                &_button {
+                    padding-bottom: .75rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    &_button {
+                        width: 100%;
+                        @include tablet {
+                            width: 9.375rem;
+                            padding-left: 2rem;
+                            padding-right: 2rem;
+                        }
+                    }
+                }
+            }
         }
-        @include desktop {
-            margin: 0 6rem;
-        }
-        &_person {
+        &_comments {
             display: flex;
             flex-direction: column;
+            margin: 1rem;
+            margin-top: 0;
             @include tablet {
-                padding-right: 2em;
-                max-width: 30vw;
-                overflow-wrap: break-word;
+                margin: 1rem 6rem;
             }
             @include desktop {
-                padding-right: 5em;
+                margin: 1rem 24rem;
             }
-            &_name {
-                margin: 1rem 0;
-                @include bold;
-                font-size: 1.25rem;
-                @include tablet {
-                    font-size: 1.3125rem;
-                    line-height: 2rem;
+            &_comment {
+                margin-top: 1rem;
+                border-bottom: .0625rem solid $Mercury;
+                display: flex;
+                &_avatar {
+                    &_image {
+                        margin: 0 1rem 0 0;
+                        height: 2.25rem;
+                        width: 2.25rem;
+                        border-radius: 50%;
+                        background-color: $Mercury;
+                        @include tablet {
+                            height: 3rem;
+                            width: 3rem;
+                        }
+                    }
                 }
-            }
-            &_address {
-                margin: 1rem 0;
-                @include regular;
-                font-size: 1.25rem;
-                @include tablet {
-                    font-size: 1.3125rem;
-                    line-height: 2rem;
+                &_comment {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    &_name {
+                        display: flex;
+                        justify-content: space-between;
+                        &_name {
+                            margin: 0;
+                            @include demi;
+                            color: $BandSite-Black;
+                            font-size: .8125rem;
+                            line-height: 1.125rem;
+                            @include tablet {
+                                margin: 0;
+                                padding-bottom: .5rem;
+                                font-size: .875rem;
+                                line-height: 1.375rem;
+                            }
+                        }
+                        &_date {
+                            margin: 0;
+                            @include regular;
+                            color: $Silver;
+                            font-size: .8125rem;
+                            line-height: 1.125rem;
+                            @include tablet {
+                                margin: 0;
+                                padding-bottom: .5rem;
+                                font-size: .875rem;
+                                line-height: 1.375rem;
+                            }
+                        }
+                    }
+                    &_text {
+                        @include regular;
+                        color: $BandSite-Black;
+                        font-size: .8125rem;
+                        line-height: 1.125rem;
+                        @include tablet {
+                            margin: 0;
+                            font-size: .875rem;
+                            line-height: 1.375rem;
+                            padding-bottom: 1rem;
+                        }
+                    }
                 }
-            }
-            &_email {
-                margin: 1rem 0;
-                @include regular;
-                font-size: 1.25rem;
-                @include tablet {
-                    font-size: 1.3125rem;
-                    line-height: 2rem;
-                }
-                &_link {
-                    @include reset-link;
-                }
-            }
-        }
-    }
-    &_copyright {
-        padding-top: 4rem;
-        &_logo {
-            @include tablet {
-                    display: none;
-            }
-            &_link {
-                @include reset-link;
-                padding-left: 1.5rem;
-            }
-            &_image {
-                width: 10rem;
-                // max-height: 1.25rem;
-                // max-width: 7.5rem;
-            }
-        }
-        &_text {
-            margin: 0 0 0 1.5rem;
-            padding: 1.5rem 0;
-            @include regular;
-            font-size: 1rem;
-            @include tablet {
-                padding: 0 0 3rem 0;
-                margin: 0 0 0 3rem;
-                font-size: 1.3125rem;
-                line-height: 2rem;
-            }
-            @include desktop {
-                margin: 0 0 0 6rem;
             }
         }
     }

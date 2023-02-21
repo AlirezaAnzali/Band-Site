@@ -1,0 +1,205 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+@use "./partials/general" as *;
+
+.main {
+    width: 100%;
+    &_hero {
+        width: 100%;
+        height: 16rem;
+        position: relative;
+        background-image: url(../assets/Images/hero-shows.jpg);
+        background-size: cover;
+        background-position: center;
+        @include tablet {
+            height: 25rem;
+        }
+        @include desktop {
+            height: 40rem;
+        }
+        &_overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $BandSite-Black, $alpha: .5);
+            position: absolute;
+            top:0;
+            left:0;
+            display: flex;
+            flex-direction: column;
+            @include desktop {
+                flex-direction:row;
+            }
+        }
+        &_text {
+            &_subtitle {
+                margin: 0;
+                padding: 2rem 1rem 0 1rem;
+                @include demi;
+                font-size: .875rem;
+                line-height: 1.375rem;
+                color: $White;
+                @include tablet {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    padding: 3rem 2.25rem 0 2.25rem;
+                }
+                @include desktop {
+                    padding:12rem 0 0 8rem;
+                }
+            }
+            &_title {
+                margin: 0;
+                padding: 1rem;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                @include bold;
+                color: $White;
+                @include tablet {
+                    font-size: 3.75rem;
+                    line-height: 4.25rem;
+                    padding: 2.25rem;
+                    padding-top: 1rem;
+                }
+                @include desktop {
+                    padding-left: 8rem;
+                }
+            }
+        }
+        &_frame {
+            margin:0 1rem;
+            @include tablet {
+                margin:0 2.25rem;
+                width: 55%;
+            }
+            @include desktop {
+                margin:0 8rem;
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &_song {
+                border-radius:.25rem;
+                width: 100%;
+            }    
+        }
+    }
+    &_shows {
+        width: 100%;
+        background-color: $White;
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+        }
+        &_title {
+            margin: 0;
+            padding: 1.4rem 1rem 1.4rem 1rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            @include demi;
+            color: $BandSite-DarkBlack;
+            @include tablet {
+                padding: 3rem 2.25rem 1rem 2.25rem;
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+            @include desktop {
+                padding: 3.5rem 3rem 2.25rem 8rem;
+            }
+        }
+        &_mobile {
+            display:flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 0 1rem;
+            @include tablet {
+                display: none;
+            }
+            &_event {
+                display:flex;
+                flex-direction: column;
+                margin: 0 0 1rem 0;
+                border-bottom: .125rem solid $Mercury;
+                &:hover {
+                    background-color: $Alabaster;
+                }
+            }
+            &_header {
+                margin: .3rem 0;
+                font-size: .75rem;
+                @include demi;
+            }
+            &_date{
+                margin: 0 0 1rem 0;
+                @include demi;
+                color: $BandSite-Black;
+                font-size: .8438rem;
+            }
+            &_data {
+                margin: 0 0 1rem 0;
+                @include regular;
+                color: $BandSite-Black;
+                font-size: .8438rem;
+            }
+            &_button {
+                width: 100%;
+                font-size: .9375rem;
+            }
+        }
+        &_table {
+            display: none;
+            @include tablet {
+                display:flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0 2.25rem;
+            }
+            @include desktop {
+                display:flex;
+                flex-direction: column;
+                padding: 0 8rem;
+            }
+            &_headerrow {
+                display: flex;
+                justify-content: space-between;
+            }
+            &_header {
+                margin: 0;
+                font-size: .75rem;
+                @include demi;
+                width: 25%;
+            }
+            &_event {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 0;
+                margin: 0;
+                border-bottom: .125rem solid $Mercury;
+                &:hover {
+                    background-color: $Alabaster;
+                }
+            }
+            &_date{
+                margin: 0;
+                @include demi;
+                color: $BandSite-Black;
+                font-size: .8438rem;
+                width: 25%;
+            }
+            &_data {
+                margin: 0;
+                @include regular;
+                color: $BandSite-Black;
+                font-size: .8438rem;
+                width: 25%;
+            }
+            &_button {
+                width: 100%;
+                font-size: .9375rem;
+            }
+        }
+    }
+}

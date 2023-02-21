@@ -1,9 +1,296 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./typography" as *;
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
+::placeholder {
+  color: #000;
+  opacity: 1;
+  @include regular;
+}
+
+.label {
+  margin-bottom: 1rem;
+  @include regular;
+  color: $Silver;
+}
+
+.box {
+  border: 0.125rem solid $Mercury;
+  border-radius: 0.25rem;
+  width: 100%;
+  background-color: $Alabaster;
+  color: $BandSite-DarkBlack;
+  @include regular;
+  &:focus {
+    border: 0.125rem solid $BandSite-DarkBlack;
+  }
+  &:invalid {
+    border: 0.125rem solid #D22D2D;
+  }
+}
+
+.button {
+    height: 2.5rem;
+    color: $White;
+    background-color: $BandSite-Black;
+    border-radius: .25rem;
+    border: none;
+    @include demi;
+    &:hover {
+        background-color: $BandSite-DarkBlack;
+    }
+}
+
+.header {
+    width: 100%;
+    background-color: $BandSite-Black;
+    &_nav{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        @include tablet {
+            flex-direction: row;
+        }
+        &_logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 1rem 0 0 0;
+            @include tablet {
+                padding: 1.25rem 2.25rem;
+            }
+            @include desktop {
+                padding: 2rem  2.25rem 2rem 8rem;
+            }
+            &_link {
+                @include reset-link;
+            }
+            &_image {
+                max-height: 1.25rem;
+                max-width: 7.5rem;
+            }
+        }
+        &_list {
+            @include reset-list;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &_item {
+                width: 50vw;
+                height: 100%;
+                padding: .5rem;
+                text-align: center;
+                color: $Mercury;
+                @include demi;
+                font-size: .875rem;
+                line-height: 1.375rem;
+                &:hover {
+                    color: $White;
+                    @include demi;
+                    border-bottom: .2188rem solid $White;
+                }
+                &--active {
+                    color: $White;
+                    @include demi;
+                    border-bottom: .2188rem solid $White;
+                }
+                @include tablet {
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    padding: 0;
+                    margin: 0 1.75rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: .875rem;
+                    line-height: 1.375rem;
+                }
+                @include desktop {
+                    margin: 0 1.25rem;
+                }
+            }
+            &_link {
+                @include reset-link;
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: $BandSite-Black;
+    color: $White;
+    &_get {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            &_left {
+                display: flex;
+                justify-content: flex-start;
+                align-items: baseline;
+            }
+        }
+        &_title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &_text {
+                margin: .6rem 0;
+                padding: 1.4rem 1rem 0rem 1rem;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                @include demi;
+                @include tablet {
+                padding: 3rem 1rem 1rem 2.25rem;
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+                }
+                @include desktop {
+                padding: 3rem 2rem 2.25rem 8rem;
+                }
+            }
+        }
+        &_icons {
+            &_list {
+                @include reset-list;
+                display: flex;
+            }
+            &_item {
+                padding: .5rem .8rem .5rem 1rem;
+            }
+            &_link {
+                @include reset-link;
+            }
+            &_icon {
+                height: 1.3rem;
+            }
+        }
+        &_logo {
+            display: none;
+            @include tablet {
+                display: flex;
+                padding-right: 2.25rem;
+                overflow: hidden;
+                &_link {
+                    @include reset-link;
+                }
+                &_image {
+                    max-height: 1.25rem;
+                    max-width: 7.5rem;
+                }
+            }
+            @include desktop {
+                padding-right: 8rem;
+            }
+        }
+    }
+    &_contact {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+        @include tablet {
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 0 2.25rem;
+        }
+        @include desktop {
+            margin: 0 8rem;
+        }
+        &_person {
+            display: flex;
+            flex-direction: column;
+            @include tablet {
+                padding-right: 3rem;
+                overflow-wrap: break-word;
+                &--left {
+                    padding-right: 0;
+                }
+            }
+            @include desktop {
+                padding-right: 5em;
+            }
+            &_name {
+                margin: .5rem 0;
+                @include demi;
+                font-size: .8125rem;
+                line-height: 1.125rem;
+                @include tablet {
+                    font-size: .875rem;
+                    line-height: 1.25rem;
+                }
+            }
+            &_address {
+                margin: .5rem 0;
+                @include regular;
+                font-size: .8125rem;
+                line-height: 1.125rem;
+                @include tablet {
+                    font-size: .875rem;
+                    line-height: 1.25rem;
+                }
+            }
+            &_email {
+                margin: .5rem 0;
+                @include regular;
+                font-size: .8125rem;
+                line-height: 1.125rem;
+                @include tablet {
+                    font-size: .875rem;
+                    line-height: 1.25rem;
+                }
+                &_link {
+                    @include reset-link;
+                }
+            }
+        }
+    }
+    &_copyright {
+        padding-top: 3rem;
+        &_logo {
+            @include tablet {
+                    display: none;
+            }
+            &_link {
+                @include reset-link;
+                padding-left: 1rem;
+            }
+            &_image {
+                max-height: 1.25rem;
+                max-width: 7.5rem;
+            }
+        }
+        &_text {
+            margin: 0;
+            padding: 1rem;
+            @include regular;
+            font-size: .6875rem;
+            line-height: 1.125rem;
+            @include tablet {
+                padding: 0 0 2.25rem 0;
+                margin: 0 0 0 2.25rem;
+                font-size: .875rem;
+                line-height: 1.25rem;
+            }
+            @include desktop {
+                margin: 0 0 0 8rem;
+            }
+        }
+    }
+}
+

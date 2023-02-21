@@ -11,12 +11,11 @@
     <header class="header">
         <nav class="header_nav">
             <section class="header_nav_logo">
-                <a class="header_nav_logo_link" href="#"><img class="header_nav_logo_image" src="./assets/Logo/Logo-bandsite.svg" alt="Bandsite's logo"></a>
+                <a class="header_nav_logo_link" href="./index.html"><img class="header_nav_logo_image" src="./assets/Logo/Logo-bandsite.svg" alt="Bandsite's logo"></a>
             </section>
             <ul class="header_nav_list">
-                <li class="header_nav_list_item header_nav_list_item--active"><a class="header_nav_list_link" href="#">Biography</a></li>
-                <li class="header_nav_list_item"><a class="header_nav_list_link" href="#">Shows</a></li>
-                
+                <li class="header_nav_list_item header_nav_list_item--active"><a class="header_nav_list_link" href="./index.html">Biography</a></li>
+                <li class="header_nav_list_item"><a class="header_nav_list_link" href="./pages/shows.html">Shows</a></li>
             </ul>
         </nav>
     </header>
@@ -51,6 +50,30 @@
                 <img class="main_gallary_photoes_photo" src="./assets/Images/Photo-gallery-9.jpg" alt="Photo gallery 9">
             </section>
         </section>
+        <section class="main_conversation">
+            <h2 class="main_conversation_title">Join the Conversation</h2>
+            <form class="main_conversation_form" id="comment_form">
+                <section class="main_conversation_form_avatar">
+                    <div class="main_conversation_form_avatar_image"></div>
+                </section>
+                <section class="main_conversation_form_comment">
+                    <div class="main_conversation_form_comment_name">
+                        <label for="name" class="main_conversation_form_comment_name_label label">NAME</label><br>
+                        <input type="text" id="name" class="main_conversation_form_comment_name_box box" form="comment_form" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="main_conversation_form_comment_comment">
+                        <label for="comment" class="main_conversation_form_comment_comment_label label">COMMENT</label><br>
+                        <textarea name="comment" id="comment" class="main_conversation_form_comment_comment_box box" form="comment_form" placeholder="Add a new comment" required></textarea>
+                    </div>
+                    <div class="main_conversation_form_comment_button">
+                        <button type="submit" class="main_conversation_form_comment_button_button button">COMMENT</button>
+                    </div>
+                </section>
+            </form>
+            <section class="main_conversation_comments">
+                
+            </section>
+        </section>
     </main>
     <footer class="footer">
         <section class="footer_get">
@@ -67,7 +90,7 @@
                 </div>
             </div>
             <div class="footer_get_logo">
-                <a class="footer_get_logo_link" href="#"><img class="footer_get_logo_image" src="./assets/Logo/Logo-bandsite.svg" alt="Bandsite's logo"></a>
+                <a class="footer_get_logo_link" href="./index.html"><img class="footer_get_logo_image" src="./assets/Logo/Logo-bandsite.svg" alt="Bandsite's logo"></a>
             </div>
         </section>
         <section class="footer_contact">
@@ -81,7 +104,7 @@
                 <h5 class="footer_contact_person_address">Booking Agent for<br>US / South America / Japan</h5>
                 <p class="footer_contact_person_email"><a class="footer_contact_person_email_link" rel="noopener noreferrer" href="pearl.gregg@limitlessag.com" target="_blank">pearl.gregg@limitlessag.com</a></p>
             </div>
-            <div class="footer_contact_person">
+            <div class="footer_contact_person footer_contact_person--left">
                 <h4 class="footer_contact_person_name">Carson Whyte<br>ARCH Entertainment</h4>
                 <h5 class="footer_contact_person_address">Booking Agent for<br>UK / EU / AU</h5>
                 <p class="footer_contact_person_email"><a class="footer_contact_person_email_link" rel="noopener noreferrer" href="cwhyte@archentertainment.com" target="_blank">cwhyte@archentertainment.com</a></p>
@@ -89,10 +112,11 @@
         </section>
         <section class="footer_copyright">
            <div class="footer_copyright_logo">
-                <a class="footer_copyright_logo_link" href="#"><img class="footer_copyright_logo_image" src="./assets/Logo/Logo-bandsite.svg" alt="Bandsite's logo"></a>
+                <a class="footer_copyright_logo_link" href="./index.html"><img class="footer_copyright_logo_image" src="./assets/Logo/Logo-bandsite.svg" alt="Bandsite's logo"></a>
             </div>
             <p class="footer_copyright_text">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </section>
     </footer>
+    <script src="./scripts/index-page.js"></script>
 </body>
 </html>
