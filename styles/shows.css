@@ -570,6 +570,8 @@ body {
 }
 @media screen and (min-width: 80rem) {
   .main_shows_table {
+    display: flex;
+    flex-direction: column;
     padding: 0 8rem;
   }
 }
