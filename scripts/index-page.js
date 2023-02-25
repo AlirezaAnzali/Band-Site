@@ -18,32 +18,32 @@ const comments = [
 
 // displayComment function for manipulating DOM
 function displayComment(obj) {
-  let commentsSec = document.querySelector(".main_conversation_comments");
+  let commentsSec = document.querySelector(".main__conversation__comments");
   let commentSec = document.createElement("section");
-  commentSec.classList.add("main_conversation_comments_comment");
+  commentSec.classList.add("main__conversation__comments__comment");
 
   let avatarSec = document.createElement("section");
-  avatarSec.classList.add("main_conversation_comments_comment_avatar");
+  avatarSec.classList.add("main__conversation__comments__comment__avatar");
 
   let imageDiv = document.createElement("div");
-  imageDiv.classList.add("main_conversation_comments_comment_avatar_image");
+  imageDiv.classList.add("main__conversation__comments__comment__avatar__image");
 
   let comSec = document.createElement("section");
-  comSec.classList.add("main_conversation_comments_comment_comment");
+  comSec.classList.add("main__conversation__comments__comment__comment");
 
   let nameDiv = document.createElement("div");
-  nameDiv.classList.add("main_conversation_comments_comment_comment_name");
+  nameDiv.classList.add("main__conversation__comments__comment__comment__name");
 
   let nameEl = document.createElement("p");
-  nameEl.classList.add("main_conversation_comments_comment_comment_name_name");
+  nameEl.classList.add("main__conversation__comments__comment__comment__name__name");
   nameEl.innerText = obj.name;
 
   let dateEl = document.createElement("p");
-  dateEl.classList.add("main_conversation_comments_comment_comment_name_date");
+  dateEl.classList.add("main__conversation__comments__comment__comment__name__date");
   dateEl.innerText = obj.timestamp;
 
   let textEl = document.createElement("p");
-  textEl.classList.add("main_conversation_comments_comment_comment_text");
+  textEl.classList.add("main__conversation__comments__comment__comment__text");
   textEl.innerText = obj.text;
 
   nameDiv.appendChild(nameEl);
@@ -62,7 +62,7 @@ for (let i=0; i<comments.length;i++) {
     displayComment(comments[i]);
 };
 
-const form = document.querySelector(".main_conversation_form");
+const form = document.querySelector(".main__conversation__form");
 
 // Add an event listener to the form
 form.addEventListener("submit", function (event) {
@@ -70,10 +70,10 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const nameInput = document.querySelector(
-    ".main_conversation_form_comment_name_box"
+    ".main__conversation__form__comment__name__box"
   );
   const commentInput = document.querySelector(
-    ".main_conversation_form_comment_comment_box"
+    ".main__conversation__form__comment__comment__box"
   );
   // Get the submitting time
   const currentDate = new Date();
@@ -99,7 +99,7 @@ form.addEventListener("submit", function (event) {
   comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
   // Clear all comments from the page
-  const commentsSec = document.querySelector(".main_conversation_comments");
+  const commentsSec = document.querySelector(".main__conversation__comments");
   commentsSec.innerHTML = "";
 
   // Re-render all comments from the comment array

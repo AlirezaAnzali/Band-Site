@@ -55,7 +55,7 @@ body {
 .header {
     width: 100%;
     background-color: $BandSite-Black;
-    &_nav{
+    &__nav{
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -63,7 +63,7 @@ body {
         @include tablet {
             flex-direction: row;
         }
-        &_logo {
+        &__logo {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -75,20 +75,20 @@ body {
             @include desktop {
                 padding: 2rem  2.25rem 2rem 8rem;
             }
-            &_link {
+            &__link {
                 @include reset-link;
             }
-            &_image {
+            &__image {
                 max-height: 1.25rem;
                 max-width: 7.5rem;
             }
         }
-        &_list {
+        &__list {
             @include reset-list;
             display: flex;
             justify-content: center;
             align-items: center;
-            &_item {
+            &__item {
                 width: 50vw;
                 height: 100%;
                 padding: .5rem;
@@ -122,7 +122,7 @@ body {
                     margin: 0 1.25rem;
                 }
             }
-            &_link {
+            &__link {
                 @include reset-link;
             }
         }
@@ -133,24 +133,24 @@ body {
     width: 100%;
     background-color: $BandSite-Black;
     color: $White;
-    &_get {
+    &__get {
         display: flex;
         flex-direction: column;
         @include tablet {
             flex-direction: row;
             align-items: baseline;
             justify-content: space-between;
-            &_left {
+            &__left {
                 display: flex;
                 justify-content: flex-start;
                 align-items: baseline;
             }
         }
-        &_title {
+        &__title {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            &_text {
+            &__text {
                 margin: .6rem 0;
                 padding: 1.4rem 1rem 0rem 1rem;
                 font-size: 1.5rem;
@@ -166,31 +166,31 @@ body {
                 }
             }
         }
-        &_icons {
-            &_list {
+        &__icons {
+            &__list {
                 @include reset-list;
                 display: flex;
             }
-            &_item {
+            &__item {
                 padding: .5rem .8rem .5rem 1rem;
             }
-            &_link {
+            &__link {
                 @include reset-link;
             }
-            &_icon {
+            &__icon {
                 height: 1.3rem;
             }
         }
-        &_logo {
+        &__logo {
             display: none;
             @include tablet {
                 display: flex;
                 padding-right: 2.25rem;
                 overflow: hidden;
-                &_link {
+                &__link {
                     @include reset-link;
                 }
-                &_image {
+                &__image {
                     max-height: 1.25rem;
                     max-width: 7.5rem;
                 }
@@ -200,7 +200,7 @@ body {
             }
         }
     }
-    &_contact {
+    &__contact {
         display: flex;
         flex-direction: column;
         margin: 0 1rem;
@@ -212,7 +212,7 @@ body {
         @include desktop {
             margin: 0 8rem;
         }
-        &_person {
+        &__person {
             display: flex;
             flex-direction: column;
             @include tablet {
@@ -225,7 +225,7 @@ body {
             @include desktop {
                 padding-right: 5em;
             }
-            &_name {
+            &__name {
                 margin: .5rem 0;
                 @include demi;
                 font-size: .8125rem;
@@ -235,7 +235,7 @@ body {
                     line-height: 1.25rem;
                 }
             }
-            &_address {
+            &__address {
                 margin: .5rem 0;
                 @include regular;
                 font-size: .8125rem;
@@ -245,7 +245,7 @@ body {
                     line-height: 1.25rem;
                 }
             }
-            &_email {
+            &__email {
                 margin: .5rem 0;
                 @include regular;
                 font-size: .8125rem;
@@ -254,28 +254,28 @@ body {
                     font-size: .875rem;
                     line-height: 1.25rem;
                 }
-                &_link {
+                &__link {
                     @include reset-link;
                 }
             }
         }
     }
-    &_copyright {
+    &__copyright {
         padding-top: 3rem;
-        &_logo {
+        &__logo {
             @include tablet {
                     display: none;
             }
-            &_link {
+            &__link {
                 @include reset-link;
                 padding-left: 1rem;
             }
-            &_image {
+            &__image {
                 max-height: 1.25rem;
                 max-width: 7.5rem;
             }
         }
-        &_text {
+        &__text {
             margin: 0;
             padding: 1rem;
             @include regular;

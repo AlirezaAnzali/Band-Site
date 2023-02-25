@@ -87,18 +87,18 @@ body {
   width: 100%;
   background-color: #323232;
 }
-.header_nav {
+.header__nav {
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
 }
 @media screen and (min-width: 48rem) {
-  .header_nav {
+  .header__nav {
     flex-direction: row;
   }
 }
-.header_nav_logo {
+.header__nav__logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,24 +106,24 @@ body {
   padding: 1rem 0 0 0;
 }
 @media screen and (min-width: 48rem) {
-  .header_nav_logo {
+  .header__nav__logo {
     padding: 1.25rem 2.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .header_nav_logo {
+  .header__nav__logo {
     padding: 2rem 2.25rem 2rem 8rem;
   }
 }
-.header_nav_logo_link {
+.header__nav__logo__link {
   text-decoration: none;
   color: inherit;
 }
-.header_nav_logo_image {
+.header__nav__logo__image {
   max-height: 1.25rem;
   max-width: 7.5rem;
 }
-.header_nav_list {
+.header__nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -131,7 +131,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.header_nav_list_item {
+.header__nav__list__item {
   width: 50vw;
   height: 100%;
   padding: 0.5rem;
@@ -142,20 +142,20 @@ body {
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
-.header_nav_list_item:hover {
+.header__nav__list__item:hover {
   color: #FFFFFF;
   font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
   font-weight: 600;
   border-bottom: 0.2188rem solid #FFFFFF;
 }
-.header_nav_list_item--active {
+.header__nav__list__item--active {
   color: #FFFFFF;
   font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
   font-weight: 600;
   border-bottom: 0.2188rem solid #FFFFFF;
 }
 @media screen and (min-width: 48rem) {
-  .header_nav_list_item {
+  .header__nav__list__item {
     width: -moz-fit-content;
     width: fit-content;
     padding: 0;
@@ -168,11 +168,11 @@ body {
   }
 }
 @media screen and (min-width: 80rem) {
-  .header_nav_list_item {
+  .header__nav__list__item {
     margin: 0 1.25rem;
   }
 }
-.header_nav_list_link {
+.header__nav__list__link {
   text-decoration: none;
   color: inherit;
 }
@@ -182,28 +182,28 @@ body {
   background-color: #323232;
   color: #FFFFFF;
 }
-.footer_get {
+.footer__get {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
-  .footer_get {
+  .footer__get {
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
   }
-  .footer_get_left {
+  .footer__get__left {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
   }
 }
-.footer_get_title {
+.footer__get__title {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.footer_get_title_text {
+.footer__get__title__text {
   margin: 0.6rem 0;
   padding: 1.4rem 1rem 0rem 1rem;
   font-size: 1.5rem;
@@ -212,92 +212,92 @@ body {
   font-weight: 600;
 }
 @media screen and (min-width: 48rem) {
-  .footer_get_title_text {
+  .footer__get__title__text {
     padding: 3rem 1rem 1rem 2.25rem;
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .footer_get_title_text {
+  .footer__get__title__text {
     padding: 3rem 2rem 2.25rem 8rem;
   }
 }
-.footer_get_icons_list {
+.footer__get__icons__list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
 }
-.footer_get_icons_item {
+.footer__get__icons__item {
   padding: 0.5rem 0.8rem 0.5rem 1rem;
 }
-.footer_get_icons_link {
+.footer__get__icons__link {
   text-decoration: none;
   color: inherit;
 }
-.footer_get_icons_icon {
+.footer__get__icons__icon {
   height: 1.3rem;
 }
-.footer_get_logo {
+.footer__get__logo {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  .footer_get_logo {
+  .footer__get__logo {
     display: flex;
     padding-right: 2.25rem;
     overflow: hidden;
   }
-  .footer_get_logo_link {
+  .footer__get__logo__link {
     text-decoration: none;
     color: inherit;
   }
-  .footer_get_logo_image {
+  .footer__get__logo__image {
     max-height: 1.25rem;
     max-width: 7.5rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .footer_get_logo {
+  .footer__get__logo {
     padding-right: 8rem;
   }
 }
-.footer_contact {
+.footer__contact {
   display: flex;
   flex-direction: column;
   margin: 0 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer_contact {
+  .footer__contact {
     flex-direction: row;
     justify-content: flex-start;
     margin: 0 2.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .footer_contact {
+  .footer__contact {
     margin: 0 8rem;
   }
 }
-.footer_contact_person {
+.footer__contact__person {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 48rem) {
-  .footer_contact_person {
+  .footer__contact__person {
     padding-right: 3rem;
     overflow-wrap: break-word;
   }
-  .footer_contact_person--left {
+  .footer__contact__person--left {
     padding-right: 0;
   }
 }
 @media screen and (min-width: 80rem) {
-  .footer_contact_person {
+  .footer__contact__person {
     padding-right: 5em;
   }
 }
-.footer_contact_person_name {
+.footer__contact__person__name {
   margin: 0.5rem 0;
   font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -305,12 +305,12 @@ body {
   line-height: 1.125rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer_contact_person_name {
+  .footer__contact__person__name {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
-.footer_contact_person_address {
+.footer__contact__person__address {
   margin: 0.5rem 0;
   font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -318,12 +318,12 @@ body {
   line-height: 1.125rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer_contact_person_address {
+  .footer__contact__person__address {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
-.footer_contact_person_email {
+.footer__contact__person__email {
   margin: 0.5rem 0;
   font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -331,33 +331,33 @@ body {
   line-height: 1.125rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer_contact_person_email {
+  .footer__contact__person__email {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
 }
-.footer_contact_person_email_link {
+.footer__contact__person__email__link {
   text-decoration: none;
   color: inherit;
 }
-.footer_copyright {
+.footer__copyright {
   padding-top: 3rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer_copyright_logo {
+  .footer__copyright__logo {
     display: none;
   }
 }
-.footer_copyright_logo_link {
+.footer__copyright__logo__link {
   text-decoration: none;
   color: inherit;
   padding-left: 1rem;
 }
-.footer_copyright_logo_image {
+.footer__copyright__logo__image {
   max-height: 1.25rem;
   max-width: 7.5rem;
 }
-.footer_copyright_text {
+.footer__copyright__text {
   margin: 0;
   padding: 1rem;
   font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
@@ -366,7 +366,7 @@ body {
   line-height: 1.125rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer_copyright_text {
+  .footer__copyright__text {
     padding: 0 0 2.25rem 0;
     margin: 0 0 0 2.25rem;
     font-size: 0.875rem;
@@ -374,7 +374,7 @@ body {
   }
 }
 @media screen and (min-width: 80rem) {
-  .footer_copyright_text {
+  .footer__copyright__text {
     margin: 0 0 0 8rem;
   }
 }
@@ -382,7 +382,7 @@ body {
 .main {
   width: 100%;
 }
-.main_hero {
+.main__hero {
   width: 100%;
   height: 16rem;
   position: relative;
@@ -391,16 +391,16 @@ body {
   background-position: center;
 }
 @media screen and (min-width: 48rem) {
-  .main_hero {
+  .main__hero {
     height: 25rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .main_hero {
+  .main__hero {
     height: 40rem;
   }
 }
-.main_hero_overlay {
+.main__hero__overlay {
   width: 100%;
   height: 100%;
   background-color: rgba(50, 50, 50, 0.5);
@@ -411,11 +411,11 @@ body {
   flex-direction: column;
 }
 @media screen and (min-width: 80rem) {
-  .main_hero_overlay {
+  .main__hero__overlay {
     flex-direction: row;
   }
 }
-.main_hero_text_subtitle {
+.main__hero__text__subtitle {
   margin: 0;
   padding: 2rem 1rem 0 1rem;
   font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
@@ -425,18 +425,18 @@ body {
   color: #FFFFFF;
 }
 @media screen and (min-width: 48rem) {
-  .main_hero_text_subtitle {
+  .main__hero__text__subtitle {
     font-size: 1.5rem;
     line-height: 2rem;
     padding: 3rem 2.25rem 0 2.25rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .main_hero_text_subtitle {
+  .main__hero__text__subtitle {
     padding: 12rem 0 0 8rem;
   }
 }
-.main_hero_text_title {
+.main__hero__text__title {
   margin: 0;
   padding: 1rem;
   font-size: 1.5rem;
@@ -446,7 +446,7 @@ body {
   color: #FFFFFF;
 }
 @media screen and (min-width: 48rem) {
-  .main_hero_text_title {
+  .main__hero__text__title {
     font-size: 3.75rem;
     line-height: 4.25rem;
     padding: 2.25rem;
@@ -454,21 +454,21 @@ body {
   }
 }
 @media screen and (min-width: 80rem) {
-  .main_hero_text_title {
+  .main__hero__text__title {
     padding-left: 8rem;
   }
 }
-.main_hero_frame {
+.main__hero__frame {
   margin: 0 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .main_hero_frame {
+  .main__hero__frame {
     margin: 0 2.25rem;
     width: 55%;
   }
 }
 @media screen and (min-width: 80rem) {
-  .main_hero_frame {
+  .main__hero__frame {
     margin: 0 8rem;
     width: 25%;
     display: flex;
@@ -476,23 +476,23 @@ body {
     align-items: center;
   }
 }
-.main_hero_frame_song {
+.main__hero__frame__song {
   border-radius: 0.25rem;
   width: 100%;
 }
-.main_shows {
+.main__shows {
   width: 100%;
   background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 80rem) {
-  .main_shows {
+  .main__shows {
     flex-direction: row;
     align-items: baseline;
   }
 }
-.main_shows_title {
+.main__shows__title {
   margin: 0;
   padding: 1.4rem 1rem 1.4rem 1rem;
   font-size: 1.5rem;
@@ -502,66 +502,69 @@ body {
   color: #000000;
 }
 @media screen and (min-width: 48rem) {
-  .main_shows_title {
+  .main__shows__title {
     padding: 3rem 2.25rem 1rem 2.25rem;
     font-size: 2.25rem;
     line-height: 2.75rem;
   }
 }
 @media screen and (min-width: 80rem) {
-  .main_shows_title {
+  .main__shows__title {
     padding: 3.5rem 3rem 2.25rem 8rem;
   }
 }
-.main_shows_mobile {
+.main__shows__mobile {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 0 1rem;
 }
 @media screen and (min-width: 48rem) {
-  .main_shows_mobile {
+  .main__shows__mobile {
     display: none;
   }
 }
-.main_shows_mobile_event {
+.main__shows__mobile__event {
   display: flex;
   flex-direction: column;
   margin: 0 0 1rem 0;
   border-bottom: 0.125rem solid #E1E1E1;
 }
-.main_shows_mobile_event:hover {
+.main__shows__mobile__event:hover {
   background-color: #FAFAFA;
 }
-.main_shows_mobile_header {
+.main__shows__mobile__event--selected {
+  background-color: #E1E1E1;
+}
+.main__shows__mobile__header {
   margin: 0.3rem 0;
   font-size: 0.75rem;
   font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
-.main_shows_mobile_date {
+.main__shows__mobile__date {
   margin: 0 0 1rem 0;
   font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
   font-weight: 600;
   color: #323232;
   font-size: 0.8438rem;
 }
-.main_shows_mobile_data {
+.main__shows__mobile__data {
   margin: 0 0 1rem 0;
   font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: #323232;
   font-size: 0.8438rem;
 }
-.main_shows_mobile_button {
+.main__shows__mobile__button {
   width: 100%;
   font-size: 0.9375rem;
 }
-.main_shows_table {
+.main__shows__table {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  .main_shows_table {
+  .main__shows__table {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -569,24 +572,24 @@ body {
   }
 }
 @media screen and (min-width: 80rem) {
-  .main_shows_table {
+  .main__shows__table {
     display: flex;
     flex-direction: column;
     padding: 0 8rem;
   }
 }
-.main_shows_table_headerrow {
+.main__shows__table__headerrow {
   display: flex;
   justify-content: space-between;
 }
-.main_shows_table_header {
+.main__shows__table__header {
   margin: 0;
   font-size: 0.75rem;
   font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
   font-weight: 600;
   width: 25%;
 }
-.main_shows_table_event {
+.main__shows__table__event {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -594,10 +597,13 @@ body {
   margin: 0;
   border-bottom: 0.125rem solid #E1E1E1;
 }
-.main_shows_table_event:hover {
+.main__shows__table__event:hover {
   background-color: #FAFAFA;
 }
-.main_shows_table_date {
+.main__shows__table__event--selected {
+  background-color: #E1E1E1;
+}
+.main__shows__table__date {
   margin: 0;
   font-family: "Avenir Demi", "Avenir Demi ttf", Arial, Helvetica, sans-serif;
   font-weight: 600;
@@ -605,7 +611,7 @@ body {
   font-size: 0.8438rem;
   width: 25%;
 }
-.main_shows_table_data {
+.main__shows__table__data {
   margin: 0;
   font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -613,7 +619,7 @@ body {
   font-size: 0.8438rem;
   width: 25%;
 }
-.main_shows_table_button {
+.main__shows__table__button {
   width: 100%;
   font-size: 0.9375rem;
 }/*# sourceMappingURL=shows.css.map */

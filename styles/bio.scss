@@ -5,7 +5,7 @@
 
 .main {
     width: 100%;
-    &_hero {
+    &__hero {
         width: 100%;
         height: 12.5rem;
         position: relative;
@@ -18,7 +18,7 @@
         @include desktop {
             height: 40rem;
         }
-        &_overlay {
+        &__overlay {
             width: 100%;
             height: 100%;
             background-color: rgba($color: $BandSite-Black, $alpha: .5);
@@ -28,7 +28,7 @@
             display: flex;
             align-items: center;
         }
-        &_title {
+        &__title {
             margin: 0;
             padding: 1rem;
             font-size: 1.5rem;
@@ -45,10 +45,10 @@
             }
         }
     }
-    &_about {
+    &__about {
         width: 100%;
         background-color: $White;
-        &_title {
+        &__title {
             margin: 0;
             padding: 1.4rem 1rem 0rem 1rem;
             font-size: 1.5rem;
@@ -64,7 +64,7 @@
                 padding: 3.5rem 3rem 2.25rem 8rem;
             }
         }
-        &_image {
+        &__image {
             // width: calc(100vw - 2rem);
             height: 10rem;
             margin: .5rem 1rem;
@@ -81,7 +81,7 @@
                 margin: 0 13.5rem;
             }
         }
-        &_qoute {
+        &__qoute {
             margin: 1rem 1rem .25rem 1rem;
             padding: 0;
             @include demi;
@@ -97,7 +97,7 @@
                 margin: 3rem 13.5rem 1rem 13.5rem;
             }
         }
-        &_leader {
+        &__leader {
             margin: .5rem 1rem .5rem 1rem;
             padding: 0;
             @include demi;
@@ -113,7 +113,7 @@
                 margin: 1rem 13.5rem;
             }
         }
-        &_band {
+        &__band {
             margin: 1.5rem 1rem 1rem 1rem;
             padding: 0;
             @include demi;
@@ -128,7 +128,7 @@
                 margin: 4rem 13.5rem 2rem 13.5rem;
             }
         }
-        &_paragraphs {
+        &__paragraphs {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -140,7 +140,7 @@
             @include desktop {
                 margin: 0 13.5rem;
             }
-            &_text {
+            &__text {
                 padding: 0;
                 margin: 0 1rem;
                 @include regular;
@@ -171,10 +171,10 @@
             }
         }
     }
-    &_gallary {
+    &__gallary {
         width: 100%;
         background-color: $Alabaster;
-        &_title {
+        &__title {
             margin: .7rem 0;
             padding: 1.4rem 1rem 0rem 1rem;
             font-size: 1.5rem;
@@ -190,7 +190,7 @@
                 padding: 3.5rem 3rem 2.25rem 8rem;
             }
         }
-        &_photoes {
+        &__photoes {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -205,7 +205,7 @@
             @include desktop {
                 margin: 0 8rem;
             }
-            &_photo {
+            &__photo {
                 width: calc(100vw - 2rem);
                 margin: 0 1rem 1rem 1rem;
                 @include tablet {
@@ -219,10 +219,10 @@
             }
         }
     }
-    &_conversation {
+    &__conversation {
         width: 100%;
         background-color: $White;
-        &_title {
+        &__title {
             margin: 0;
             padding: 1.4rem 1rem 0rem 1rem;
             font-size: 1.5rem;
@@ -238,7 +238,7 @@
                 padding: 3.5rem 3rem 2.25rem 8rem;
             }
         }
-        &_form {
+        &__form {
             display: flex;
             margin: 1rem;
             margin-bottom: 0;
@@ -249,8 +249,8 @@
             @include desktop {
                 margin: 1rem 24rem;
             }
-            &_avatar {
-                &_image {
+            &__avatar {
+                &__image {
                     margin: 1.2rem 1rem 0 0;
                     height: 2.25rem;
                     width: 2.25rem;
@@ -264,16 +264,16 @@
                     }
                 }
             }
-            &_comment {
+            &__comment {
                 display: flex;
                 flex-direction: column;
                 width: 100%;
-                &_name {
+                &__name {
                     padding-bottom: .75rem;
-                    &_label {
+                    &__label {
                         font-size: .625rem;
                     }
-                    &_box {
+                    &__box {
                         min-height: 2.25rem;
                         padding: .625rem;
                         font-size: .875rem;
@@ -282,23 +282,23 @@
                         }
                     }
                 }
-                &_comment {
+                &__comment {
                     padding-bottom: .75rem;
-                    &_label {
+                    &__label {
                         font-size: .625rem;
                     }
-                    &_box {
+                    &__box {
                         min-height: 6.5rem;
                         padding: .625rem;
                         font-size: .875rem;
                         resize: none;
                     }
                 }
-                &_button {
+                &__button {
                     padding-bottom: .75rem;
                     display: flex;
                     justify-content: flex-end;
-                    &_button {
+                    &__button {
                         width: 100%;
                         @include tablet {
                             width: 9.375rem;
@@ -309,7 +309,7 @@
                 }
             }
         }
-        &_comments {
+        &__comments {
             display: flex;
             flex-direction: column;
             margin: 1rem;
@@ -320,12 +320,12 @@
             @include desktop {
                 margin: 1rem 24rem;
             }
-            &_comment {
+            &__comment {
                 margin-top: 1rem;
                 border-bottom: .0625rem solid $Mercury;
                 display: flex;
-                &_avatar {
-                    &_image {
+                &__avatar {
+                    &__image {
                         margin: 0 1rem 0 0;
                         height: 2.25rem;
                         width: 2.25rem;
@@ -337,14 +337,14 @@
                         }
                     }
                 }
-                &_comment {
+                &__comment {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
-                    &_name {
+                    &__name {
                         display: flex;
                         justify-content: space-between;
-                        &_name {
+                        &__name {
                             margin: 0;
                             @include demi;
                             color: $BandSite-Black;
@@ -357,7 +357,7 @@
                                 line-height: 1.375rem;
                             }
                         }
-                        &_date {
+                        &__date {
                             margin: 0;
                             @include regular;
                             color: $Silver;
@@ -371,7 +371,7 @@
                             }
                         }
                     }
-                    &_text {
+                    &__text {
                         @include regular;
                         color: $BandSite-Black;
                         font-size: .8125rem;

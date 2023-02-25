@@ -5,7 +5,7 @@
 
 .main {
     width: 100%;
-    &_hero {
+    &__hero {
         width: 100%;
         height: 16rem;
         position: relative;
@@ -18,7 +18,7 @@
         @include desktop {
             height: 40rem;
         }
-        &_overlay {
+        &__overlay {
             width: 100%;
             height: 100%;
             background-color: rgba($color: $BandSite-Black, $alpha: .5);
@@ -31,8 +31,8 @@
                 flex-direction:row;
             }
         }
-        &_text {
-            &_subtitle {
+        &__text {
+            &__subtitle {
                 margin: 0;
                 padding: 2rem 1rem 0 1rem;
                 @include demi;
@@ -48,7 +48,7 @@
                     padding:12rem 0 0 8rem;
                 }
             }
-            &_title {
+            &__title {
                 margin: 0;
                 padding: 1rem;
                 font-size: 1.5rem;
@@ -66,7 +66,7 @@
                 }
             }
         }
-        &_frame {
+        &__frame {
             margin:0 1rem;
             @include tablet {
                 margin:0 2.25rem;
@@ -79,13 +79,13 @@
                 justify-content: center;
                 align-items: center;
             }
-            &_song {
+            &__song {
                 border-radius:.25rem;
                 width: 100%;
             }    
         }
     }
-    &_shows {
+    &__shows {
         width: 100%;
         background-color: $White;
         display: flex;
@@ -94,7 +94,7 @@
             flex-direction: row;
             align-items: baseline;
         }
-        &_title {
+        &__title {
             margin: 0;
             padding: 1.4rem 1rem 1.4rem 1rem;
             font-size: 1.5rem;
@@ -110,7 +110,7 @@
                 padding: 3.5rem 3rem 2.25rem 8rem;
             }
         }
-        &_mobile {
+        &__mobile {
             display:flex;
             flex-direction: column;
             width: 100%;
@@ -118,7 +118,7 @@
             @include tablet {
                 display: none;
             }
-            &_event {
+            &__event {
                 display:flex;
                 flex-direction: column;
                 margin: 0 0 1rem 0;
@@ -126,30 +126,33 @@
                 &:hover {
                     background-color: $Alabaster;
                 }
+                &--selected {
+                    background-color: $Mercury;
+                }
             }
-            &_header {
+            &__header {
                 margin: .3rem 0;
                 font-size: .75rem;
                 @include demi;
             }
-            &_date{
+            &__date{
                 margin: 0 0 1rem 0;
                 @include demi;
                 color: $BandSite-Black;
                 font-size: .8438rem;
             }
-            &_data {
+            &__data {
                 margin: 0 0 1rem 0;
                 @include regular;
                 color: $BandSite-Black;
                 font-size: .8438rem;
             }
-            &_button {
+            &__button {
                 width: 100%;
                 font-size: .9375rem;
             }
         }
-        &_table {
+        &__table {
             display: none;
             @include tablet {
                 display:flex;
@@ -162,17 +165,17 @@
                 flex-direction: column;
                 padding: 0 8rem;
             }
-            &_headerrow {
+            &__headerrow {
                 display: flex;
                 justify-content: space-between;
             }
-            &_header {
+            &__header {
                 margin: 0;
                 font-size: .75rem;
                 @include demi;
                 width: 25%;
             }
-            &_event {
+            &__event {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -182,22 +185,25 @@
                 &:hover {
                     background-color: $Alabaster;
                 }
+                &--selected {
+                    background-color: $Mercury;
+                }
             }
-            &_date{
+            &__date{
                 margin: 0;
                 @include demi;
                 color: $BandSite-Black;
                 font-size: .8438rem;
                 width: 25%;
             }
-            &_data {
+            &__data {
                 margin: 0;
                 @include regular;
                 color: $BandSite-Black;
                 font-size: .8438rem;
                 width: 25%;
             }
-            &_button {
+            &__button {
                 width: 100%;
                 font-size: .9375rem;
             }
