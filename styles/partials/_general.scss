@@ -35,9 +35,13 @@ body {
   &:focus {
     border: 0.125rem solid $BandSite-DarkBlack;
   }
-  &:invalid {
+}
+
+.invalid {
     border: 0.125rem solid #D22D2D;
-  }
+    &::placeholder {
+        color: #D22D2D;
+    }
 }
 
 .button {

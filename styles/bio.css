@@ -66,8 +66,15 @@ body {
 .box:focus {
   border: 0.125rem solid #000000;
 }
-.box:invalid {
+
+.invalid {
   border: 0.125rem solid #D22D2D;
+}
+.invalid::-moz-placeholder {
+  color: #D22D2D;
+}
+.invalid::placeholder {
+  color: #D22D2D;
 }
 
 .button {

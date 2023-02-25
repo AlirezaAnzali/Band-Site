@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="./styles/bio.css">
     <title>BANDSITE Biography</title>
 </head>
@@ -59,11 +60,11 @@
                 <section class="main__conversation__form__comment">
                     <div class="main__conversation__form__comment__name">
                         <label for="name" class="main__conversation__form__comment__name__label label">NAME</label><br>
-                        <input type="text" id="name" class="main__conversation__form__comment__name__box box" form="comment__form" name="name" placeholder="Enter your name" required>
+                        <input type="text" id="name" class="main__conversation__form__comment__name__box box" form="comment__form" name="name" placeholder="Enter your name">
                     </div>
                     <div class="main__conversation__form__comment__comment">
                         <label for="comment" class="main__conversation__form__comment__comment__label label">COMMENT</label><br>
-                        <textarea name="comment" id="comment" class="main__conversation__form__comment__comment__box box" form="comment__form" placeholder="Add a new comment" required></textarea>
+                        <textarea name="comment" id="comment" class="main__conversation__form__comment__comment__box box" form="comment__form" placeholder="Add a new comment"></textarea>
                     </div>
                     <div class="main__conversation__form__comment__button">
                         <button type="submit" class="main__conversation__form__comment__button__button button">COMMENT</button>
@@ -117,6 +118,6 @@
             <p class="footer__copyright__text">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </section>
     </footer>
-    <script src="./scripts/index-page.js"></script>
+    <script src="./scripts/index-page.js" type="text/javascript"></script>
 </body>
 </html>
