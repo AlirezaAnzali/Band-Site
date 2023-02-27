@@ -852,4 +852,41 @@ body {
     line-height: 1.375rem;
     padding-bottom: 1rem;
   }
+}
+.main__conversation__comments__comment__comment__like {
+  width: 4rem;
+  height: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.main__conversation__comments__comment__comment__like__button {
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: #FAFAFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__conversation__comments__comment__comment__like__button:hover {
+  background-color: #E1E1E1;
+}
+.main__conversation__comments__comment__comment__like__button__image {
+  height: 1.3rem;
+}
+.main__conversation__comments__comment__comment__like__number {
+  margin: 0 0 0 1rem;
+  font-family: "Avenir Regular", "Avenir Regular ttf", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #AFAFAF;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+@media screen and (min-width: 48rem) {
+  .main__conversation__comments__comment__comment__like__number {
+    padding-bottom: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }/*# sourceMappingURL=bio.css.map */

@@ -1,7 +1,7 @@
 const apiKey = "?api_key=f4971231-5cc4-462d-86e2-b5691f6f78e7";
 const url = "https://project-1-api.herokuapp.com/";
 
-function displayComment(obj) {
+function displayComment(obj, id) {
   let commentsSec = document.querySelector(".main__conversation__comments");
   let commentSec = document.createElement("section");
   commentSec.classList.add("main__conversation__comments__comment");
@@ -43,10 +43,49 @@ function displayComment(obj) {
   textEl.classList.add("main__conversation__comments__comment__comment__text");
   textEl.innerText = obj.comment;
 
+  let likeDiv = document.createElement("div");
+  likeDiv.classList.add("main__conversation__comments__comment__comment__like");
+  
+  let likeButton = document.createElement("button");
+  likeButton.classList.add(
+    "main__conversation__comments__comment__comment__like__button",
+    "button"
+  );
+
+  likeButton.addEventListener("click", function (event) {
+    // PUT /comments/:id/like
+    axios
+      .put(url + "comments/" + id + "/like" + apiKey)
+      .then((response) => {
+        console.log(response);
+        // Update the number of likes in the UI
+        numberLike.innerText = response.data.likes;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
+
+  let numberLike = document.createElement("span");
+  numberLike.classList.add(
+    "main__conversation__comments__comment__comment__like__number"
+  );
+  numberLike.innerText = obj.likes;
+  
+  let imageLike = document.createElement("img");
+  imageLike.classList.add(
+    "main__conversation__comments__comment__comment__like__image"
+  );
+  imageLike.setAttribute("src", "../assets/Icons/SVG/icon-like.svg");
+
   nameDiv.appendChild(nameEl);
   nameDiv.appendChild(dateEl);
+  likeButton.appendChild(imageLike);
+  likeDiv.appendChild(likeButton);
+  likeDiv.appendChild(numberLike);
   comSec.appendChild(nameDiv);
   comSec.appendChild(textEl);
+  comSec.appendChild(likeDiv);
   avatarSec.appendChild(imageDiv);
   commentSec.appendChild(avatarSec);
   commentSec.appendChild(comSec);
@@ -68,7 +107,8 @@ function getComments() {
       commentsSec.innerHTML = "";
 
       // display comments
-      getData.forEach((obj) => displayComment(obj));
+      getData.forEach((obj) => displayComment(obj, obj.id));
+
     })
     .catch((error) => {
       console.error(error);
@@ -78,6 +118,7 @@ function getComments() {
 // call getComments when page loads
 getComments();
 
+// submit the form
 const form = document.querySelector(".main__conversation__form");
 
 form.addEventListener("submit", function (event) {
