@@ -43,12 +43,17 @@ function displayComment(obj, id) {
   textEl.classList.add("main__conversation__comments__comment__comment__text");
   textEl.innerText = obj.comment;
 
-  let likeDiv = document.createElement("div");
-  likeDiv.classList.add("main__conversation__comments__comment__comment__like");
+  let modifyingDiv = document.createElement("div");
+  modifyingDiv.classList.add("main__conversation__comments__comment__comment__modify");
   
+  let likeDiv = document.createElement("div");
+  likeDiv.classList.add(
+    "main__conversation__comments__comment__comment__modify__like"
+  );
+   
   let likeButton = document.createElement("button");
   likeButton.classList.add(
-    "main__conversation__comments__comment__comment__like__button",
+    "main__conversation__comments__comment__comment__modify__like__button",
     "button"
   );
 
@@ -65,27 +70,60 @@ function displayComment(obj, id) {
         console.error(error);
       });
   });
+  let imageLike = document.createElement("img");
+  imageLike.classList.add(
+    "main__conversation__comments__comment__comment__modify__like__button__image"
+  );
+  imageLike.setAttribute("src", "../assets/Icons/SVG/icon-like.svg");
 
   let numberLike = document.createElement("span");
   numberLike.classList.add(
-    "main__conversation__comments__comment__comment__like__number"
+    "main__conversation__comments__comment__comment__modify__like__number"
   );
   numberLike.innerText = obj.likes;
   
-  let imageLike = document.createElement("img");
-  imageLike.classList.add(
-    "main__conversation__comments__comment__comment__like__image"
+  let deleteDiv = document.createElement("div");
+  deleteDiv.classList.add(
+    "main__conversation__comments__comment__comment__modify__delete"
   );
-  imageLike.setAttribute("src", "../assets/Icons/SVG/icon-like.svg");
+  
+  let deleteButton = document.createElement("button");
+  deleteButton.classList.add(
+    "main__conversation__comments__comment__comment__modify__delete__button",
+    "button"
+  );
+
+  deleteButton.addEventListener("click", function (event) {
+    // PUT /comments/:id/like
+    axios
+      .delete(url + "comments/" + id + apiKey)
+      .then((response) => {
+        console.log(response);
+        commentSec.remove();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
+
+  let imageDelete = document.createElement("img");
+  imageDelete.classList.add(
+    "main__conversation__comments__comment__comment__modify__delete__button__image"
+  );
+  imageDelete.setAttribute("src", "../assets/Icons/SVG/icon-delete.svg");
 
   nameDiv.appendChild(nameEl);
   nameDiv.appendChild(dateEl);
   likeButton.appendChild(imageLike);
   likeDiv.appendChild(likeButton);
   likeDiv.appendChild(numberLike);
+  deleteButton.appendChild(imageDelete);
+  deleteDiv.appendChild(deleteButton);
+  modifyingDiv.appendChild(likeDiv);
+  modifyingDiv.appendChild(deleteDiv);
   comSec.appendChild(nameDiv);
   comSec.appendChild(textEl);
-  comSec.appendChild(likeDiv);
+  comSec.appendChild(modifyingDiv);
   avatarSec.appendChild(imageDiv);
   commentSec.appendChild(avatarSec);
   commentSec.appendChild(comSec);
