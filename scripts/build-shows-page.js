@@ -3,9 +3,7 @@ const url = "https://project-1-api.herokuapp.com/";
 
 // declaring function for inserting shows
 function insertNewShow(obj, data) {
-  const mobileSection = document.createElement("section");
-  mobileSection.classList.add("main__shows__mobile");
-  mainShowsSection.appendChild(mobileSection);
+  let mobileSection = document.querySelector(".main__shows__mobile");
 
   const mobileEventDiv = document.createElement("div");
   mobileEventDiv.classList.add("main__shows__mobile__event");
@@ -62,6 +60,7 @@ function insertNewShow(obj, data) {
 
   mobileEventDiv.appendChild(mobileButtonDiv);
 
+  let tableSection = document.querySelector(".main__shows__table");
   if (obj === data[0]) {
     const tableHeaderRow = document.createElement("div");
     tableHeaderRow.classList.add("main__shows__table__headerrow");
@@ -113,23 +112,6 @@ function insertNewShow(obj, data) {
   tableEventDiv.appendChild(tableButtonDiv);
 }
 
-
-// adding shows by invoking function on Shows array objects
-const mainShowsSection = document.createElement("section");
-mainShowsSection.classList.add("main__shows");
-
-const showsTitle = document.createElement("h2");
-showsTitle.classList.add("main__shows__title");
-showsTitle.innerText = "Shows";
-mainShowsSection.appendChild(showsTitle);
-
-const tableSection = document.createElement("section");
-tableSection.classList.add("main__shows__table");
-mainShowsSection.appendChild(tableSection);
-
-const main = document.querySelector("main");
-main.appendChild(mainShowsSection);
-
 function getShows() {
   axios
     .get(url + "showdates" + apiKey)
@@ -139,6 +121,26 @@ function getShows() {
 
       // sort comments by date
       getData.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+      // adding shows by invoking function on Shows array objects
+      const mainShowsSection = document.createElement("section");
+      mainShowsSection.classList.add("main__shows");
+
+      const showsTitle = document.createElement("h2");
+      showsTitle.classList.add("main__shows__title");
+      showsTitle.innerText = "Shows";
+      mainShowsSection.appendChild(showsTitle);
+
+      let mobileSection = document.createElement("section");
+      mobileSection.classList.add("main__shows__mobile");
+      mainShowsSection.appendChild(mobileSection);
+
+      let tableSection = document.createElement("section");
+      tableSection.classList.add("main__shows__table");
+      mainShowsSection.appendChild(tableSection);
+
+      const main = document.querySelector("main");
+      main.appendChild(mainShowsSection);
 
       // display shows
       getData.forEach((obj) => insertNewShow(obj, getData));
