@@ -74,7 +74,7 @@ function displayComment(obj, id) {
   imageLike.classList.add(
     "main__conversation__comments__comment__comment__modify__like__button__image"
   );
-  imageLike.setAttribute("src", "../assets/Icons/SVG/icon-like.svg");
+  imageLike.setAttribute("src", "./assets/Icons/SVG/icon-like.svg");
 
   let numberLike = document.createElement("span");
   numberLike.classList.add(
@@ -110,7 +110,7 @@ function displayComment(obj, id) {
   imageDelete.classList.add(
     "main__conversation__comments__comment__comment__modify__delete__button__image"
   );
-  imageDelete.setAttribute("src", "../assets/Icons/SVG/icon-delete.svg");
+  imageDelete.setAttribute("src", "./assets/Icons/SVG/icon-delete.svg");
 
   nameDiv.appendChild(nameEl);
   nameDiv.appendChild(dateEl);
