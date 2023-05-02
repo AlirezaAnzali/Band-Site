@@ -1,6 +1,6 @@
 # Band-Site
 
-This is the Band-Site project created by me for BrainStation software engineering boot camp using basic HTML, SASS, JavaScript, DOM manipulation, and APIs.
+This is the Band-Site a fully responsive project created for BrainStation software engineering boot camp using basic HTML, SASS, JavaScript, DOM manipulation, and APIs.
 
 This project was completed over a period of three weeks, with each week corresponding to a separate sprint.
 
