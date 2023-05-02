@@ -1,4 +1,5 @@
-#Band-Site
+# Band-Site
+
 This is the Band-Site project created by me for BrainStation software engineering boot camp using basic HTML, SASS, JavaScript, DOM manipulation, and APIs.
 
 This project was completed over a period of three weeks, with each week corresponding to a separate sprint.
@@ -9,7 +10,7 @@ This project was completed over a period of three weeks, with each week correspo
 
 This repository contains the final product as it was submitted.
 
-##Features
+## Features
 The project has the following features:
 
 -It pulls data from Heroku using Axios
@@ -17,7 +18,7 @@ The project has the following features:
 -Posting comments will automatically update the page with the new comment.
 
 
-##Setup
+## Setup
 To view the project, please follow the instructions below:
 
 
